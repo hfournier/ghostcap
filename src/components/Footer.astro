@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+
+import logo from "@assets/gcmmlogoghostcap.png";
+---
+
+<footer class="flex flex-col items-center gap-3">
+  <div class="flex w-full gap-56 rounded-xl bg-indigo-600 p-12">
+    <nav class="flex flex-col gap-6">
+      <h4 class="text-sm font-bold text-zinc-100">About GhostCap</h4>
+      <ul class="flex flex-col gap-1">
+        <li><a class="text-sm text-zinc-200" href="#">About</a></li>
+        <li><a class="text-sm text-zinc-200" href="#">Provacy Policy</a></li>
+        <li><a class="text-sm text-zinc-200" href="#">Terms of Service</a></li>
+        <li><a class="text-sm text-zinc-200" href="#">Contact</a></li>
+        <li><a class="text-sm text-zinc-200" href="#">Status</a></li>
+      </ul>
+    </nav>
+    <nav class="flex flex-col gap-6">
+      <h4 class="text-sm font-bold text-zinc-100">Social</h4>
+      <ul class="flex flex-col gap-1">
+        <li><a class="text-sm text-zinc-200" href="#">Facebook</a></li>
+        <li><a class="text-sm text-zinc-200" href="#">Steam</a></li>
+        <li><a class="text-sm text-zinc-200" href="#">Twitter</a></li>
+        <li><a class="text-sm text-zinc-200" href="#">Youtube</a></li>
+        <li><a class="text-sm text-zinc-200" href="#">Patreon</a></li>
+      </ul>
+    </nav>
+  </div>
+  <Image class="py-5" src={logo} width={32} height={35} alt="GhostCap logo" />
+  <div class="py-3 text-sm text-zinc-300">&copy; 2024 GhostCap&reg;</div>
+  <p class="text-sm text-zinc-300">
+    All product and company names are trademarks&trade; or registered&reg;
+    trademarks of their respective holders. Use of them does not imply any
+    affiliation with or endorsement by them.
+  </p>
+  <p class="text-center text-sm text-zinc-300">
+    We may earn commission from companies if you purchase via our affiliate
+    link. This helps us run GhostCap as a free resource for you. Please note
+    that we are not asked to promote these products and do so on our own accord.
+    As an Amazon Associate we may earn from qualifying purchases
+  </p>
+  <p class="text-sm text-zinc-300">
+    All specifications are subject to change without notice.
+  </p>
+</footer>

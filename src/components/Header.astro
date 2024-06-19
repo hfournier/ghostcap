@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets";
+import Nav from "./Nav.astro";
+
+import logo from "@assets/gcmmlogoghostcap.png";
+import Search from "./Search.astro";
+---
+
+<header class="flex items-center justify-between">
+  <div class="flex items-center gap-6">
+    <Image src={logo} width={32} height={35} alt="GhostCap logo" />
+    <Nav />
+  </div>
+  <Search />
+</header>

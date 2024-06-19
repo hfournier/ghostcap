@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .scrollable::-webkit-scrollbar {
+    @apply h-2 w-1 bg-indigo-600;
+  }
+  .scrollable::-webkit-scrollbar-track {
+    @apply my-1 rounded-full bg-zinc-950;
+  }
+  .scrollable::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-indigo-700 hover:bg-indigo-500;
+  }
+  @supports (scrollbar-color: darkgray lightgray) {
+    .scrollable {
+      scrollbar-width: thin;
+      scrollbar-color: theme(colors.indigo.600) theme(colors.zinc.950);
+    }
+  }
+
+  body {
+    @apply font-opensans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-montserrat;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 1.6rem - -1.6vw, 2.2rem);
+  }
+  h2 {
+    font-size: 1.8rem;
+    font-size: clamp(1.45rem, 1.28rem - -1.32vw, 1.9rem);
+  }
+  h3 {
+    font-size: 1.6rem;
+    font-size: clamp(1.3rem, 1.15rem - -1.15vw, 1.8rem);
+  }
+  h4 {
+    font-size: 1.4rem;
+    font-size: clamp(1.15rem, 1.05rem - -0.92vw, 1.6rem);
+  }
+  h5,
+  h6 {
+    font-size: 1rem;
+  }
+}
