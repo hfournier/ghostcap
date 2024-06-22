@@ -1,57 +1,26 @@
 ---
+import { getCollection } from "astro:content";
+import CardList from "./CardList.astro";
 import Card from "./Card.astro";
 
-import palworld from "@assets/Palworld-Sakurajima-Update-hero-image.jpg";
-import CardList from "./CardList.astro";
+const latestPosts = await getCollection(
+  "posts",
+  (post) => post.data.draft !== true
+);
+const sortedPosts = latestPosts
+  .sort((a, b) => b.data.createdAt.valueOf() - a.data.createdAt.valueOf())
+  .slice(0, 8);
 ---
 
 <CardList title="Latest">
-  <Card
-    title="Palworld Sakurajima Update: Release Date And Details"
-    pubDate="June 18, 2024"
-    image={palworld}
-    imageAlt="Screenshot of Palworld Sakurajima Update: Release Date And Details"
-  />
-  <Card
-    title="Palworld Sakurajima Update: Release Date And Details"
-    pubDate="June 18, 2024"
-    image={palworld}
-    imageAlt="Screenshot of Palworld Sakurajima Update: Release Date And Details"
-  />
-  <Card
-    title="Palworld Sakurajima Update: Release Date And Details"
-    pubDate="June 18, 2024"
-    image={palworld}
-    imageAlt="Screenshot of Palworld Sakurajima Update: Release Date And Details"
-  />
-  <Card
-    title="Palworld Sakurajima Update: Release Date And Details"
-    pubDate="June 18, 2024"
-    image={palworld}
-    imageAlt="Screenshot of Palworld Sakurajima Update: Release Date And Details"
-  />
-  <Card
-    title="Palworld Sakurajima Update: Release Date And Details"
-    pubDate="June 18, 2024"
-    image={palworld}
-    imageAlt="Screenshot of Palworld Sakurajima Update: Release Date And Details"
-  />
-  <Card
-    title="Palworld Sakurajima Update: Release Date And Details"
-    pubDate="June 18, 2024"
-    image={palworld}
-    imageAlt="Screenshot of Palworld Sakurajima Update: Release Date And Details"
-  />
-  <Card
-    title="Palworld Sakurajima Update: Release Date And Details"
-    pubDate="June 18, 2024"
-    image={palworld}
-    imageAlt="Screenshot of Palworld Sakurajima Update: Release Date And Details"
-  />
-  <Card
-    title="Palworld Sakurajima Update: Release Date And Details"
-    pubDate="June 18, 2024"
-    image={palworld}
-    imageAlt="Screenshot of Palworld Sakurajima Update: Release Date And Details"
-  />
+  {
+    sortedPosts.map((post) => (
+      <Card
+        title={post.data.title}
+        pubDate={post.data.createdAt}
+        image={post.data.featuredMedia?.src}
+        imageAlt={post.data.featuredMedia?.alt}
+      />
+    ))
+  }
 </CardList>

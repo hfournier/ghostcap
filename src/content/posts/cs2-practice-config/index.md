@@ -1,0 +1,66 @@
+---
+wpId: 8338
+title: 'Best CS2 Practice Config and Commands'
+description: 'Welcome to GhostCap''s guide on setting up your very own ...'
+type: post
+createdAt: 2023-09-05T16:21:56
+modifiedAt: 2024-01-01T15:12:32
+author: pedrotski
+categories:
+  - counter-strike
+featuredMedia:
+  id: 8346
+  src: "./CS2-Practice-Config.jpg"
+  alt: "CS2 Practice Config"
+---
+
+
+Welcome to GhostCap's guide on setting up your very own local practice server in CS2. Whether you're a seasoned player or just starting out, having a dedicated practice environment can significantly improve your gameplay. In this post, you can grab the latest CS prac config, and I'll also give you some handy binds you can use.
+
+```html
+<style>a.no-border-on-hover, a.no-border-on-hover:hover { border-bottom: none !important; text-decoration: none !important; } </style>
+```
+ [![Game Host Bros Promo](@assets/images/posts/cs2-practice-config/gamehostbrospromoround.png)](https://www.gamehostbros.com/)
+
+## Creating Your Own Practice Config
+
+To get started, you'll need to create a config file. This is essentially a set of commands that the game will execute to set up your practice environment. You can download a premade config from the [GhostCap Github](https://github.com/ghostcap-gaming/CS2-Practice-Server-Config) repo [here (right click, save as)](https://raw.githubusercontent.com/ghostcap-gaming/CS2-Practice-Server-Config/main/practice.cfg) or create your own below.
+
+**Steps to Create a Config File:**
+
+1.  Navigate to the CS2 cfg folder: `C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg`
+2.  Duplicate autoexec.cfg
+3.  Clear its contents, and rename it. We recommend naming it `practice.cfg` for easy reference.
+4.  Add the following commands to your new file and save
+
+`// GhostCap Practice Config   bot_kick   mp_warmup_end   sv_cheats 1   mp_limitteams 0   mp_autoteambalance 0   mp_maxmoney 60000   mp_startmoney 60000   mp_buytime 9999   mp_buy_anywhere 1   mp_freezetime 0   mp_roundtime 60   mp_roundtime_defuse 60   mp_respawn_on_death_ct 1   mp_respawn_on_death_t 1   sv_infinite_ammo 1   sv_showimpacts 1   sv_showimpacts_time 10   ammo_grenade_limit_total 5   sv_grenade_trajectory_prac_pipreview 1   mp_restartgame 1   echo "GhostCap Practice Settings Loaded!"`
+
+Alternatively, if you don't want to create a config, here is a simple copy and paste command you can enter into the console. Just remember you would need to paste this every time rather than simply typing exec practice.
+
+`bot_kick; mp_warmup_end; sv_cheats 1; mp_limitteams 0; mp_autoteambalance 0; mp_maxmoney 60000; mp_startmoney 60000; mp_buytime 9999; mp_buy_anywhere 1; mp_freezetime 0; mp_roundtime 60; mp_roundtime_defuse 60; mp_respawn_on_death_ct 1; mp_respawn_on_death_t 1; sv_infinite_ammo 1; sv_showimpacts 1; sv_showimpacts_time 10; ammo_grenade_limit_total 5; sv_grenade_trajectory_prac_pipreview 1; mp_restartgame 1; echo "GhostCap Practice Settings Loaded!";`
+
+## Launching Your Practice Server
+
+Once you have added your config to your CS2 directory, it's time to create a local practice server.
+
+1.  Start CS2 and navigate to `Play > Practice > Competitive`
+2.  Select the map you desire and click `GO`
+3.  Once the map has loaded, [open the console](https://www.ghostcap.com/cs2-commands/) (Tilde `~` key)
+4.  Execute the created config by typing `exec practice`
+
+If you need to start fresh, you will need to restart your game. 
+
+## Practice Binds
+
+Here are some useful binds that you can use that will help you use the CS2 practice config. Simply open the console and paste these in. You can change the bind from MOUSE5 to whatever key or button you want.
+
+1.  `bind "MOUSE5" "noclip"` - Allows you to fly around the map
+2.  `bind "MOUSE5" "sv_rethrow_last_grenade"` - Will trow the most recent grenade so you can see the landing position
+
+## Switching Maps
+
+If you wish to switch maps, use the `map` command in the console. For instance, to change to the map de\_inferno, type `map de_mirage`. After changing maps, you may need to reload your CS2 practice config.
+
+## Conclusion
+
+Setting up a dedicated practice server in CS2 can greatly enhance your training sessions, allowing you to focus on specific skills like grenade trajectories, spray control, and wall bangs. I hope that this prac config helps you hit your Counter Strike 2 training goals.

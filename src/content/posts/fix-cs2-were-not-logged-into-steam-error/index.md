@@ -1,0 +1,38 @@
+---
+wpId: 8405
+title: 'Fix CS2 "We''re not logged into Steam" Error'
+description: 'On the 27th of October 2023, There was an update ...'
+type: post
+createdAt: 2023-10-27T15:17:58
+modifiedAt: 2023-10-27T15:18:01
+author: pedrotski
+categories:
+  - counter-strike
+featuredMedia:
+  id: 8409
+  src: "./failed-with-reason-code-5005-1.jpg"
+  alt: "failed with reason code 5005"
+---
+
+
+On the 27th of October 2023, There was an update to CS2 that brought back using the Steam account token for self-hosted game servers. Before this, to download and install a CS2 server, you had to set a steam account for it to use.
+
+However, after this update, some users were greeted with the error:
+
+**Cert request for invalid failed with reason code 5005. We're not logged into Steam**
+
+It would also mean players couldn't connect to the server and the server wouldn't show up in the server browser.
+
+In this post ill show you how to fix the error as it's quite simple.
+
+## How To Fix The Error
+
+This assumes you have access to your server startup line. If you don't know what this is, then you will need to ask your server hosting provider.
+
+1.  Go to this link and make a GLST token, [https://steamcommunity.com/dev/managegameservers](https://steamcommunity.com/dev/managegameservers)
+2.  For game use the ID 730, memo can be anything you want to keep track of it.
+3.  Locate your CS2 startup command. It should look something like this "./game/cs2.sh -dedicated +ip 51.161.199.6 -port 27015 +map de\_mirage -maxplayers 7 +game\_type 0 +game\_mode 0"
+4.  At the end of the command add +sv\_setsteamaccount <your GLST here>
+5.  Restart your server
+
+After you restart you should see something like "Certificate expires in 47h50m at 1698562830 (current time 1698390630), will renew in 45h50m" in your server console, this means It's now joinable for players.

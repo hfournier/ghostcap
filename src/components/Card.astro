@@ -3,9 +3,9 @@ import { Image } from "astro:assets";
 
 type Props = {
   title: string;
-  pubDate: string;
-  image: ImageMetadata;
-  imageAlt: string;
+  pubDate: Date;
+  image?: ImageMetadata;
+  imageAlt?: string;
   featured?: boolean;
 };
 const { title, pubDate, image, imageAlt, featured = false } = Astro.props;
@@ -19,13 +19,33 @@ const { title, pubDate, image, imageAlt, featured = false } = Astro.props;
     { "col-span-4": featured },
     { "gap-16": featured },
   ]}>
-  <Image
-    class:list={["rounded-xl", { "w-[calc(50%-20px)]": featured }]}
-    src={image}
-    alt={imageAlt}
-  />
+  {
+    image && imageAlt && (
+      <Image
+        class:list={["rounded-xl", { "w-[calc(50%-20px)]": featured }]}
+        src={image}
+        alt={imageAlt}
+      />
+    )
+  }
+  {
+    !image && !imageAlt && (
+      <div class="aspect-video w-full rounded-xl bg-zinc-700" />
+    )
+  }
   <div class="flex flex-col gap-1">
-    <time class="text-sm text-zinc-500" datetime={pubDate}>{pubDate}</time>
+    <time
+      class="text-sm text-zinc-500"
+      datetime={new Date(pubDate).toISOString()}
+      >{
+        new Date(pubDate).toLocaleDateString(undefined, {
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+          timeZone: "UTC",
+        })
+      }</time
+    >
     <h3 class="text-lg font-medium text-white">{title}</h3>
   </div>
 </div>

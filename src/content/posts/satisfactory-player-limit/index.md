@@ -1,0 +1,58 @@
+---
+wpId: 7750
+title: 'How To Change The Satisfactory Player Limit (For Local And Dedicated Servers)'
+description: 'Satisfactory, the open-world adventure where players pioneer their way through ...'
+type: post
+createdAt: 2023-06-19T15:33:51
+modifiedAt: 2024-01-01T15:17:10
+author: pedrotski
+categories:
+  - satisfactory
+featuredMedia:
+  id: 7752
+  src: "./satisfactory-player-limit.jpg"
+  alt: "satisfactory player limit"
+---
+
+
+Satisfactory, the open-world adventure where players pioneer their way through an alien planet, has been a hit among gaming enthusiasts. One of the most frequently asked questions about the game is about the "satisfactory player limit". In this blog post, we will delve into this topic, providing you with a comprehensive guide on the satisfactory player limit, how to set up a satisfactory dedicated server, and more.
+
+```html
+<style>a.no-border-on-hover, a.no-border-on-hover:hover { border-bottom: none !important; text-decoration: none !important; } </style>
+```
+ [![Game Host Bros Promo](@assets/images/posts/satisfactory-player-limit/gamehostbrospromoround.png)](https://www.gamehostbros.com/)
+
+## What is the Satisfactory Player Limit?
+
+By default, Satisfactory allows a multiplayer session with a total of 4 players. This means that four players can join a game session and work together to build and explore. However, this limit is not set in stone. With a dedicated server, the player limit can be increased, allowing more players to join the server and participate in the same game session.
+
+## Setting Up a Satisfactory Dedicated Server
+
+Setting up a satisfactory dedicated server is a straightforward process. Here's a step-by-step tutorial on how to install the server:
+
+1.  **Download the Server Files:** First, you need to download the server files. You can do this through SteamCMD. Note that the server files are different from the game files, so ensure you're downloading the correct package.
+2.  **Install the Server:** Once you've downloaded the server files, you can proceed with the installation. Run the server manager and follow the prompts to install the server.
+3.  **Configure the Server:** After the installation, you'll need to configure the server. This involves setting up the server name, password, and other settings. You can do this through the server manager.
+4.  **Start the Server:** Once everything is set up, you can start the server. Players can now join the server and start playing.
+
+Remember, running a [Satisfactory dedicated server](https://www.ghostcap.com/satisfactory-dedicated-server/) requires resources. Ensure your system meets the system requirements for running a satisfactory dedicated server.
+
+## Increasing the Player Limit in Satisfactory
+
+1.  **Close the Game:** If your game is open, close it first.
+2.  **Open the Run Window:** You can do this by typing "run" into the Windows search or pressing the Windows Key + R simultaneously.
+3.  **Access the Game Configuration File:** In the run window, paste the following path: `%localappdata%\FactoryGame\Saved\Config\WindowsNoEditor\Game.ini`. This should open a file in Notepad called Game.ini.
+4.  **Edit the Configuration File:** In the Game.ini file, paste this line of code into a new line: `[/Script/Engine.GameSession] MaxPlayers=16`. You can change the number 16 to however many players you want in your game. The officially supported player cap is 4, but it can work with more.
+5.  **Save the Changes:** After you've added the line of code, save the file. Then, right-click on the file, select Properties, check the box for Read Only, and click Apply and OK.
+6.  **Adjust Network Quality:** Once you're in the game, you can go into the game settings and adjust your "Network Quality" setting from low to ultra to see what works best.
+7.  **Start the Game:** After you've done all of this, you can start either a new world or continue an old one. Make sure your world is set to friends only so that your friends can join the game.
+
+Remember, it's recommended that everyone in your group that is joining your game does this too to ensure the best case scenario, although it's not necessary. If you encounter any issues, feel free to ask for help in the Satisfactory community.
+
+Please note that this method might not work for everyone and could potentially cause issues with the game. Always proceed with caution when modifying game files.
+
+## Conclusion
+
+The satisfactory player limit is a key aspect of the multiplayer experience in Satisfactory. While the default limit is four players, it's possible to increase this limit by setting up a dedicated server. However, this comes with potential challenges in terms of server stability, resource usage, and gameplay experience. With careful management and appropriate resources, though, it's possible to host larger multiplayer sessions and bring together more players in the world of Satisfactory.
+
+Remember to always follow the guidelines and best practices when running a server, and ensure that the gaming experience remains enjoyable for all players. Happy gaming!

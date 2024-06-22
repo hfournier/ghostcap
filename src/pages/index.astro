@@ -1,36 +1,33 @@
 ---
-import "../styles/tailwind.css";
-import "../styles/fonts.css";
-
 import Latest from "@components/Latest.astro";
-import Header from "@components/Header.astro";
 import Hero from "@components/Hero.astro";
-import Gaming from "@components/Gaming.astro";
-import ServerHosting from "@components/ServerHosting.astro";
-import Footer from "@components/Footer.astro";
-import Hardware from "@components/Hardware.astro";
 import StartNow from "@components/StartNow.astro";
 import PopCat from "@components/PopCat.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import FeaturedCategory from "@components/FeaturedCategory.astro";
+
+const title = "GhostCap";
+const description =
+  "Discover the latest tech, reviews, and tips for optimizing your gaming rig and peripherals.";
 ---
 
-<html class="scrollable" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body class="mx-auto max-w-screen-2xl space-y-6 bg-zinc-950 p-4">
-    <Header />
-    <Hero />
-    <Latest />
-    <StartNow />
-    <Gaming />
-    <PopCat categories={["Counter Strike", "Minecraft", "Rust", "Valorant"]} />
-    <ServerHosting />
-    <PopCat categories={["Hosting Guides", "Hosting Reviews"]} />
-    <Hardware />
-    <Footer />
-  </body>
-</html>
+<BaseLayout {title} {description}>
+  <Hero />
+  <Latest />
+  <StartNow />
+  <FeaturedCategory category="gaming" title="Gaming" count={4} />
+  <PopCat categories={["Counter Strike", "Minecraft", "Rust", "Valorant"]} />
+  <FeaturedCategory
+    category="server-hosting"
+    title="Server Hosting"
+    count={5}
+    showFeatured={true}
+  />
+  <PopCat categories={["Hosting Guides", "Hosting Reviews"]} />
+  <FeaturedCategory
+    category="hardware"
+    title="Hardware"
+    count={5}
+    showFeatured={true}
+  />
+</BaseLayout>

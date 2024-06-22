@@ -1,0 +1,74 @@
+---
+wpId: 6157
+title: 'Valorant Download Size [How much Space Do You Need?]'
+description: 'Valorant is one of the most popular PC games in ...'
+type: post
+createdAt: 2022-07-15T17:47:13
+modifiedAt: 2022-07-17T19:28:43
+author: pedrotski
+categories:
+  - valorant
+featuredMedia:
+  id: 6169
+  src: "./Valorant-Download-Size.jpg"
+  alt: "Valorant Download Size"
+---
+
+
+Valorant is one of the most popular PC games in the world right now overtaking Counter Strike Global Offensive as the best tactical shooter by nearly 2x the player base.
+
+With over 1.5 million active players every day, chances are your friends are playing it and you're looking to [Install and download Valorant](https://www.ghostcap.com/how-to-download-and-install-valorant/) yourself to [try to climb the ranks](https://www.ghostcap.com/valorant-ranks/).
+
+The problem is, that you have the words smallest SSD drive with little free space and you need to know the Valorant download size before your computer explodes
+
+<img decoding="async" width="1529" height="859" src="/images/posts/valorant-download-size/Riot-client-downloading-valorant.png" alt="Alt attribute missing" srcset="/images/posts/valorant-download-size/Riot-client-downloading-valorant.png 1529w, /images/posts/valorant-download-size/Riot-client-downloading-valorant-768x431.png 768w" sizes="(max-width: 1529px) 100vw, 1529px" />
+
+Not to worry though, we have the exact download size for you.
+
+If you get stuck at any time, then make sure to click the button above and join our Discord. We have tons of people that play Valorant from all around the world here.
+
+## What Is The Valorant Download Size?
+
+![Valorant Download Size](@assets/images/posts/valorant-download-size/Valorant-Download-Size.png)
+
+As of July 2022, **the total Valorant download size is 25.6 GB (Gigabytes)**, however, if you include the Riot games client then that file size is 26 GB in total.
+
+When the game was first launched, Valorant's download size was only 15GB but with recent updates to the game and new content, that file size has increased.
+
+Amazingly, you can not find [Valorant's download](https://playvalorant.com/en-sg/download/) size listed on the Riot games website at all.  
+We found that if you're looking to download Valorant that the download size is small compared to other games such as COD:Warzone or CSGO.
+
+This makes it great for you to quickly download the game without having to wait a long time.
+
+## Do You Need The Riot Games Client To Download Valorant?
+
+Yes, you need the Riot Games client and a Riot Games account to download and play Valorant.  
+Therefore this is included in the Valorant download size. The client also handles other things such as the anti-cheat as well as the ability to play other games from the same launcher such as League of legends.
+
+The client will also notify you once your game download completes.
+
+## Valorant Minimum System Requirements
+
+The team at Riot Games has made it so Valorant is extremely well optimized. This means nearly anyone is able to play Valorant on your PC (As long as your PC is fairly modern you should be good to download Valorant).
+
+If you want to Install Valorant and start playing, you must make sure your computer meets the minimum Valorant system requirements.
+
+**The minimum system requirements for Valorant are:**  
+CPU - Intel Core 2 Duo E8400 or AMD Athlon 200GE  
+RAM - 4GB DDR2  
+Graphics - Intel HD 4000 or an AMD Radeon R5 200  
+OS - Windows 7/8/10/11
+
+**The recommended system requirements for Valorant are:**  
+CPU - Intel i3 4150 or AMD Ryzen 3 1200  
+RAM - 4GB DDR2  
+Graphics - Geforce GT 730 or AMD Radeon R7 240  
+OS - Windows 7/8/10/11
+
+## Conclusion
+
+<img decoding="async" width="1280" height="720" src="/images/posts/valorant-download-size/Valorant-Xbox-Series-X-1280x720-1.webp" alt="Alt attribute missing" srcset="/images/posts/valorant-download-size/Valorant-Xbox-Series-X-1280x720-1.webp 1280w, /images/posts/valorant-download-size/Valorant-Xbox-Series-X-1280x720-1-768x432.webp 768w" sizes="(max-width: 1280px) 100vw, 1280px" />
+
+Don't let Valorant's download size or the Valorant system requirements turn you off playing the game on your PC, It's at least worth testing even if your PC does not meet the system requirements.
+
+You never know your computer may run the game perfectly fine.

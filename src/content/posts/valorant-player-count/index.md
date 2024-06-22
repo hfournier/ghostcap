@@ -1,0 +1,322 @@
+---
+wpId: 6191
+title: 'Valorant Player Count [Exactly How Many People Play?]'
+description: 'Are you looking for the latest Valorant player count? Look ...'
+type: post
+createdAt: 2022-07-17T01:06:13
+modifiedAt: 2022-07-17T01:06:21
+author: pedrotski
+categories:
+  - valorant
+featuredMedia:
+  id: 6222
+  src: "./Valorant-Player-Count-scaled.webp"
+  alt: "Valorant Player Count"
+---
+
+
+Are you looking for the latest Valorant player count? Look no further!
+
+Riot Games, the creators of League of Legends, just released their newest game – Valorant. It’s a tactical first-person shooter that has everyone talking.
+
+And we have all the details on how many people are playing it right now.
+
+With over 1 million concurrent players in its first week, it’s safe to say that Valorant is off to a great start.
+
+If you’re looking for an intense and competitive shooter to sink your teeth into, then play Valorant, this is the game for you.
+
+## How Many People Play Valorant Daily?
+
+![How Many People Play Valorant Daily](@assets/images/posts/valorant-player-count/How-Many-People-Play-Valorant-Daily.jpeg)
+
+Since Riot games launched Valorant, the player count has exploded. **As of July 2022, Valorant has a peak of around 1.5 million concurrent players per day.**
+
+That's a lot of gamers who are looking for an intense first-person shooter that's unlike any other out there.
+
+A big reason for these massive player counts is that the game is free-to-play, so there's no barrier to entry for anyone who wants to jump in and start fragging some enemies.
+
+So if you were wondering is Valorant dead, rest assured it's got a ton of players around the world as this game continues to grow.
+
+## How Many People Play Valorant Monthly?
+
+<img decoding="async" width="128" height="67" src="/images/posts/valorant-player-count/How-Many-People-Play-Valorant-Monthly.webp" alt="Alt attribute missing" srcset="/images/posts/valorant-player-count/How-Many-People-Play-Valorant-Monthly.webp 1200w, /images/posts/valorant-player-count/How-Many-People-Play-Valorant-Monthly-768x403.webp 768w" sizes="(max-width: 128px) 100vw, 128px" />
+
+**According to Riot Games, the developer of Valorant, the game averages 15.7 million monthly active players.**
+
+Considering that the game is relatively new and is up against some stiff competition, this is an impressive monthly player count.
+
+When it comes to the first-person shooter genre, there are a few that stand out above the rest.
+
+Counter-Strike Global Offensive and Call of Duty are two of the most popular titles in the genre, but a new challenger has emerged in recent years.
+
+Valorant is a free-to-play fps game that has quickly gained a following among gamers.
+
+This makes Valorant one of the most popular fps games on the market today with a higher than an average number of players.
+
+## Can You Get The Valorant Live Player Count?
+
+![Can You Get The Valorant Live Player Count](@assets/images/posts/valorant-player-count/Can-You-Get-The-Valorant-Live-Player-Count.jpg)
+
+Many gamers love to see the live player count for the games they are playing. It provides a sense of competitiveness and community, especially between fans of games (Counter Strike Global Offensive vs Valo [for example lol](https://www.reddit.com/r/VALORANT/comments/vdfjt3/regarding_player_count_vs_cs_go/))
+
+For some games, the live player count or how many players are online is available right on the main screen. But for others, like Valorant, it can be difficult to find this information.
+
+Unlike other games, Riot Games doesn't offer the data for live player counts, so anything you see online that pertains to a Valorant live player count is false data. The best we can do is look at the monthly player counts.
+
+This data shows that Valorant has been steadily growing in popularity since its release in 2020.
+
+With over 15 million players worldwide, it is clear that this fps game is here to stay.
+
+So even though we can't get a live count for people playing Valorant, we can still take comfort in knowing that it is one of the most popular fps shooters around.
+
+## Is The Valorant Player Count Increasing?
+
+![Is The Valorant Player Count Increasing](@assets/images/posts/valorant-player-count/Is-The-Valorant-Player-Count-Increasing.jpg)
+
+Since its release in 2020, the Valorant player count has actually started to decline. However, once Riot Games released the [Valorant 4.0 patch](https://playvalorant.com/), this fixed lots of issues new players were facing when starting competitive Valo.
+
+Since these changes in January 2022, Valorant has gained over 1.2 million more monthly active players.
+
+This is a huge increase in just a short amount of time, and it appears that Riot's changes have had a positive effect on the game's player base.
+
+It will be interesting to see if this trend continues in the months to come, but for now, it seems like Valorant is back on track and growing strong.
+
+## Valorant Player Count History
+
+As any seasoned gamer knows, a game's average player count is essential to its long-term success. Not only does it provide a gauge of interest and support from the gaming community, but it also helps developers to track server loads and assess in-game activity.
+
+[https://www.youtube.com/watch?v=r30\_6Y3g2YQ](https://www.youtube.com/watch?v=r30_6Y3g2YQ "Play video \"The 2 Types Of Valorant Players\"")
+
+Video can't be loaded because JavaScript is disabled: [The 2 Types Of Valorant Players (https://www.youtube.com/watch?v=r30\_6Y3g2YQ)](https://www.youtube.com/watch?v=r30_6Y3g2YQ "The 2 Types Of Valorant Players")
+
+For these reasons, player count data is closely guarded by most game developers. However, thanks to the power of the internet, savvy gamers can often find ways to track this information themselves.
+
+The Valorant Player Count History chart below is one such example. Based on data gathered from a variety of sources, it provides a detailed picture of the game's player count over time.
+
+As can be seen, interest in the game has been steadily increasing since its launch and was first [available to download](https://www.ghostcap.com/how-to-download-and-install-valorant/) in June 2020.
+
+While there have been some ups and downs along the way, the overall trend is positive and shows no signs of slowing down. This is good news for both Valorant players and developers alike, as it indicates that the game has a bright future ahead.
+
+Here we can see all the data such as the daily active player count, monthly active players gain/loss and the average monthly players.
+
+**Month**
+
+**Avg Monthly**
+
+**Monthly Gain/Loss**
+
+**Active Daily**
+
+Last 30 Days
+
+15,750,116
+
+498,105
+
+1,522,511
+
+June 30, 2022
+
+15,252,011
+
+\-358,429
+
+1,474,361
+
+May 30, 2022
+
+15,610,440
+
+108,997
+
+1,509,009
+
+April 30, 2022
+
+15,501,443
+
+245,794
+
+1,498,473
+
+March 30, 2022
+
+15,255,649
+
+222,029
+
+1,474,713
+
+February 20, 2022
+
+15,033,620
+
+510,299
+
+1,453,250
+
+January 30, 2022
+
+14,523,321
+
+507,761
+
+1,403,921
+
+December 30, 2021
+
+14,015,560
+
+759,580
+
+1,354,837
+
+November 30, 2021
+
+13,255,980
+
+\-342,890
+
+1,281,411
+
+October 30, 2021
+
+13,598,870
+
+\-567,144
+
+1,314,557
+
+September 30, 2021
+
+14,166,014
+
+596,029
+
+1,369,381
+
+August 30, 2021
+
+13,569,985
+
+\-1,331,162
+
+1,311,765
+
+July 30, 2021
+
+14,901,147
+
+552,172
+
+1,440,444
+
+June 30, 2021
+
+14,348,975
+
+138,638
+
+1,387,068
+
+May 30, 2021
+
+14,210,337
+
+414,221
+
+1,373,666
+
+April 30, 2021
+
+13,796,116
+
+270,512
+
+1,333,625
+
+March 30, 2021
+
+13,525,604
+
+265,208
+
+1,307,475
+
+February 20, 2021
+
+13,260,396
+
+897,282
+
+1,281,838
+
+January 30, 2021
+
+12,363,114
+
+\-513,761
+
+1,195,101
+
+December 30, 2020
+
+12,876,875
+
+\-128,715
+
+1,244,765
+
+November 30, 2020
+
+13,005,590
+
+\-402,235
+
+1,257,207
+
+October 30, 2020
+
+13,407,825
+
+\-129,675
+
+1,296,090
+
+September 30, 2020
+
+13,537,500
+
+\-2,212,500
+
+1,308,625
+
+August 30, 2020
+
+15,750,000
+
+144,000
+
+1,522,500
+
+July 30, 2020
+
+15,606,000
+
+0
+
+1,508,580
+
+## Conclusion
+
+In conclusion, the player count for Valorant is impressive and growing every day.
+
+The game has only been out for a short time, and yet it has already amassed a large and dedicated player base.
+
+Valo game is clearly here to stay, and it has the potential to become one of the most popular games ever made.
+
+With its unique blend of tactical shooter gameplay and free-to-play model, Valorant is poised to take over the gaming world.
+
+Many people play Valorant daily, and you should join them.
+
+So if you haven't already, be sure to join the millions of players who are already enjoying this amazing game. There are always going to be fresh Valorant players for you to bully and [grind your ranks](https://www.ghostcap.com/valorant-ranks/)!

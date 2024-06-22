@@ -1,0 +1,84 @@
+---
+wpId: 8471
+title: 'How To Install CS2 Plugins And Mods [Easy Counter Strike 2 Guide]'
+description: 'If you''ve been waiting to modify your Counter Strike 2 ...'
+type: post
+createdAt: 2023-11-07T18:59:26
+modifiedAt: 2024-06-21T15:55:46
+author: pedrotski
+categories:
+  - counter-strike
+featuredMedia:
+  id: 8492
+  src: "./How-To-Install-CS2-Plugins-And-Mods.jpg"
+  alt: "How To Install CS2 Plugins And Mods"
+---
+
+
+If you've been waiting to modify your Counter Strike 2 server and install plugins, well, you're in luck. [Roflmuffin](https://github.com/roflmuffin) has released [CounterStrikeSharp](https://discord.gg/X7r3PmuYKq) as an alternative to Sourcemod for CS2 (it hasn't been released yet) and in the past few days it has exploded in popularity. In fact, there are so many plugins coming out for it, **I'm struggling to keep my [CS2 plugins list](https://www.ghostcap.com/cs2-plugins-list/) post updated**.
+
+CounterStrikeSharp is a framework that runs alongside of Metamod that makes installing plugins easy. The only downfall right now is CounterStrikeSharp only supports Linux, but that may change soon.
+
+[https://www.youtube.com/watch?v=FlsKzStHJuY](https://www.youtube.com/watch?v=FlsKzStHJuY "Play video \"How To Install Plugins on CS2 [Metamod & CounterStrikeSharp Guide]\"")
+
+Video can't be loaded because JavaScript is disabled: [How To Install Plugins on CS2 \[Metamod & CounterStrikeSharp Guide\] (https://www.youtube.com/watch?v=FlsKzStHJuY)](https://www.youtube.com/watch?v=FlsKzStHJuY "How To Install Plugins on CS2 [Metamod & CounterStrikeSharp Guide]")
+
+In this guide **I'll go over exactly how you need to install Metamod, CounterStrikeSharp and your first plugins**.
+
+## How To Install CounterStrikeSharp
+
+The first thing you need to do is to download the required files.
+
+*   Latest Metamod 2.0 Dev ([Download](https://www.sourcemm.net/downloads.php?branch=dev))
+*   CounterStrikeSharp With Runtime ([Download](https://github.com/roflmuffin/CounterStrikeSharp/releases))
+*   Windows servers: you must have [Visual Studio Redistributables](https://aka.ms/vs/17/release/vc_redist.x64.exe) installed
+
+Now that you downloaded the files, you will need to install Metamod.
+
+1.  Extract your downloaded Metamod file and copy the Metamod `/addons/` directory to `/game/csgo/`
+2.  Inside `/game/csgo/`, locate `gameinfo.gi`
+3.  Open it in notepad and look for the line " `Game_LowViolence csgo_lv // Perfect World content override`
+4.  Create a new line underneath and add " `Game csgo/addons/metamod`"
+5.  Restart your game server and type "`meta list`" in your server console to see if it works. If it says unknown command, then check you copied the Metamod addons folder to the correct location.
+6.  Download the plugin you want to use and extract it.
+7.  Copy all the files inside to `/game/csgo/metamod/`
+8.  Restart the server again and type "`meta list`" in your server console to see if the plugin is loaded
+
+_Just a quick note, some game hosts such as [Game Host Bros](https://www.gamehostbros.com/cs2-server-hosting/) (That I own) have automatic installers for CS2 Metamod, so you should use your hosts install method instead of installing manually._
+
+Inside your CSGO folder, it should look like this in the end.
+
+<img decoding="async" width="1642" height="1432" src="/images/posts/how-to-install-cs2-plugins/Game-Host-Bros-au-cs2-bhop-File-Manager.png" alt="Alt attribute missing" srcset="/images/posts/how-to-install-cs2-plugins/Game-Host-Bros-au-cs2-bhop-File-Manager.png 1642w, /images/posts/how-to-install-cs2-plugins/Game-Host-Bros-au-cs2-bhop-File-Manager-768x670.png 768w, /images/posts/how-to-install-cs2-plugins/Game-Host-Bros-au-cs2-bhop-File-Manager-1536x1340.png 1536w" sizes="(max-width: 1642px) 100vw, 1642px" />
+
+After you have confirmed Metamod works, it's time to install CounterStrikeSharp.
+
+1.  Extract your downloaded CounterStrikeSharp With Runtime file and copy the `/addons/` directory to `/game/csgo/` (the same as what you did for Metamod)
+2.  Restart your server and type "`css_plugins list`" in your server console to see if the plugin is loaded. It should say something like this "List of all plugins currently loaded by CounterStrikeSharp: gcg plugins loaded."
+3.  Create a folder called plugins in `csgo/addons/metamod/counterstrikesharp/plugins`
+
+Now you have the CounterStrikeSharp plugin installed on your CS2 servers, it's time to install your plugins.
+
+You can find plugins in my [CS2 plugins list](https://www.ghostcap.com/cs2-plugins-list/) and on the [CSS Discord](https://discord.gg/X7r3PmuYKq). Once you have downloaded the plugins you want, you simply need extract them, and copy the entire plugin folder to:
+
+`csgo/addons/metamod/counterstrikesharp/plugins`.
+
+<img decoding="async" width="1082" height="1506" src="/images/posts/how-to-install-cs2-plugins/Game-Host-Bros-sg-cs2-ze-File-Manager.png" alt="Alt attribute missing" srcset="/images/posts/how-to-install-cs2-plugins/Game-Host-Bros-sg-cs2-ze-File-Manager.png 1082w, /images/posts/how-to-install-cs2-plugins/Game-Host-Bros-sg-cs2-ze-File-Manager-768x1069.png 768w" sizes="(max-width: 1082px) 100vw, 1082px" />
+
+That's it, the plugin should automatically load up and remember, you can check `css_plugins list` to make sure it's actually loaded.
+
+## How To Fix Metamod After A CS2 Update
+
+After a Counter Strike 2 update happens, it will remove the metamod line from your gameinfo.gi file. This means none of your plugins will work. The solution is to remodify your gameinfo.gi file again.
+
+1.  Inside `/game/csgo/`, locate `gameinfo.gi`
+2.  Open it in notepad and look for the line " `Game_LowViolence csgo_lv // Perfect World content override`
+3.  Create a new line underneath and add " `Game csgo/addons/metamod`"
+4.  Restart your game server and type "`meta list`" in your server console to see if it works.
+
+## Conclusion
+
+I hope this guide has helped you install plugins on your CS2 server. It's still early days to please expect there to be bugs and be patient with the developers creating these for the community.
+
+Of course this guide is just about installing Counter Strike 2 plugins, but from here you can really code or configure your server to exactly how you want it. Now is the time to create that Surf, Bhop or Zombie Escape server in CS2.
+
+If you get stuck, remember, you can always [come and join the CounterStrikeSharp Discord](https://discord.gg/X7r3PmuYKq).

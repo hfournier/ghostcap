@@ -1,0 +1,13 @@
+{
+  "wpId": 1,
+  "name": "Pedrotski",
+  "description": "Pedrotski is the founder of GhostCap. He created it with the simple goal of helping provide gamers with a great community, amazing servers, and good reviews. Pedrotski loves gaming and wants to ensure that everyone has a great experience playing their favorite games.",
+  "link": "https://www.ghostcap.com/author/pedrotski/",
+  "slug": "pedrotski",
+  "url": "https://www.ghostcap.com/",
+  "avatar_urls": {
+    "24": "https://secure.gravatar.com/avatar/78831151222100808d0005dd4596f1ae?s=24&d=mm&r=g",
+    "48": "https://secure.gravatar.com/avatar/78831151222100808d0005dd4596f1ae?s=48&d=mm&r=g",
+    "96": "https://secure.gravatar.com/avatar/78831151222100808d0005dd4596f1ae?s=96&d=mm&r=g"
+  }
+}

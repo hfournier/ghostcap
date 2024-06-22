@@ -1,0 +1,166 @@
+---
+wpId: 7860
+title: '[FIX] Game Stutters When Moving Mouse (Solve Lag Stuttering In Games)'
+description: 'I''ll admit, I don''t have the best gaming PC, and ...'
+type: post
+createdAt: 2023-07-28T16:04:18
+modifiedAt: 2023-11-23T21:13:23
+author: pedrotski
+categories:
+  - hardware
+featuredMedia:
+  id: 7863
+  src: "./game-stutters-when-moving-mouse.jpg"
+  alt: "game stutters when moving mouse"
+---
+
+
+I'll admit, I don't have the best gaming PC, and initially I thought that's why I would have lag when I would move my mouse fast. My fps in [Valorant](https://www.ghostcap.com/riot-repair-tool/), for example, would go all the way from 300 fps down to 40 fps, making it nearly impossible to play.
+
+However, after lots of testing, I was able to **totally solve the issue in games like Valorant, Counter Strike, RUST and BattleBit.** Essentially, it was fixed in every game! It also works on Windows, Linux and macOS (Although I'll be skipping the Linux guides here)
+
+In this comprehensive guide, we'll explore various methods to fix game stutters when moving your mouse fast.
+
+I've also organized these fixes from most important, so make sure you follow them one at a time.
+
+## 1\. Change Your Mouse Polling Rate
+
+<img decoding="async" width="1136" height="880" src="/images/posts/game-stutters-when-moving-mouse/logitech-g-hub.png" alt="Alt attribute missing" srcset="/images/posts/game-stutters-when-moving-mouse/logitech-g-hub.png 1136w, /images/posts/game-stutters-when-moving-mouse/logitech-g-hub-768x595.png 768w" sizes="(max-width: 1136px) 100vw, 1136px" />
+
+You're a gamer, right? So it's safe to assume you have a gaming mouse. Well, there is something called polling rate (not to be confused with DPI) on a mouse that will report your mouse position to your PC. 
+
+What happens is some gaming mice will default to 1000hz, and this is simply too high for most mid-range systems. A higher polling rate can cause your PC to work harder, potentially leading to stuttering.
+
+To fix this, you can adjust the polling rate in your mouse's software settings. For instance, if you're using a Logitech mouse, you can adjust the polling rate through the Logitech G Hub software. It is under the section on the left called REPORT RATE (PER SECOND).
+
+**I suggest setting it to 125 - 250hz.**
+
+Here are links to the most popular mouse software, so you can check your polling rate (Download the one for your brand of mouse).
+
+*   **Logitech G Hub:** [https://www.logitechg.com/en-us/innovation/g-hub.html](https://www.logitechg.com/en-us/innovation/g-hub.html)
+*   **Razer Synapse:** [https://www.razer.com/synapse-3](https://www.razer.com/synapse-3)
+*   **SteelSeries Engine:** [https://steelseries.com/gg/engine](https://steelseries.com/gg/engine)
+*   **Corsair iCUE:** [https://www.corsair.com/us/en/s/icue](https://www.corsair.com/us/en/s/icue)
+*   **HyperX NGENUITY:** [https://hyperx.com/pages/ngenuity](https://hyperx.com/pages/ngenuity)
+*   **ROCCAT Swarm:** [https://support.roccat.com/s/downloads?language=en\_US](https://support.roccat.com/s/downloads?language=en_US)
+*   **Alienware Command Center:** [https://www.dell.com/support/home/en-ph/drivers/driversdetails?driverid=nnr5t](https://www.dell.com/support/home/en-ph/drivers/driversdetails?driverid=nnr5t)
+*   **Coolermaster MasterPlus+:** [https://masterplus.coolermaster.com/](https://masterplus.coolermaster.com/)
+
+From what I've seen, this will cause the most stuttering in games, and using a mouse is something lots of people overlook. I mean, who would think your mouse would ruin your framerate?
+
+## 2\. Updating Your Graphics Drivers
+
+<img decoding="async" width="1208" height="573" src="/images/posts/game-stutters-when-moving-mouse/Official-Drivers-NVIDIA-https-www-nvidia-com-download-index-aspx.jpg" alt="Alt attribute missing" srcset="/images/posts/game-stutters-when-moving-mouse/Official-Drivers-NVIDIA-https-www-nvidia-com-download-index-aspx.jpg 1208w, /images/posts/game-stutters-when-moving-mouse/Official-Drivers-NVIDIA-https-www-nvidia-com-download-index-aspx-768x364.jpg 768w" sizes="(max-width: 1208px) 100vw, 1208px" />
+
+Your graphics card, and chipset all rely on drivers to function correctly. If these drivers are outdated, they may not work well with newer games, causing stuttering.
+
+There can also be issues with driver versions not being optimized for a specific game. This is especially noticeable with AMD graphics cards, as they normally take time to get optimized correctly.
+
+To fix this, you should regularly update your drivers. Both Nvidia and AMD provide updates for their graphics cards. You can visit their websites or use their dedicated software to check for updates. 
+
+**I suggest using the latest version possible in all cases.**
+
+Here are the links to the most common video card manufactures, so you can download the latest GPU drivers.
+
+*   **Nvidia:** [https://www.nvidia.com/download/index.aspx](https://www.nvidia.com/download/index.aspx)
+*   **AMD:** [https://www.amd.com/en/support](https://www.amd.com/en/support)
+*   **Intel:** [https://www.intel.com/content/www/us/en/download-center/home.html](https://www.intel.com/content/www/us/en/download-center/home.html)
+
+## 3\. Disabling Unnecessary Overlays
+
+<img decoding="async" width="800" height="450" src="/images/posts/game-stutters-when-moving-mouse/game_overlay_settings.gif" alt="Alt attribute missing" srcset="/images/posts/game-stutters-when-moving-mouse/game_overlay_settings.gif 800w, /images/posts/game-stutters-when-moving-mouse/game_overlay_settings-768x432.gif 768w" sizes="(max-width: 800px) 100vw, 800px" />
+
+Overlays, such as those from Discord or Steam, can also cause game stuttering. These overlays can consume significant system resources, leading to stuttering when you move your mouse.
+
+Disabling these overlays can help free up system resources and improve your gaming experience. Here's how you can disable overlays in Discord and Steam:
+
+### Discord
+
+1.  Open Discord and click on the `User Settings` icon (it looks like a gear) located at the bottom left of the Discord window.
+2.  From the sidebar, select `Overlay`.
+3.  Toggle off the switch next to `Enable in-game overlay`.
+4.  Restart your game to apply the changes.
+
+### Steam
+
+1.  Open Steam and click on `Steam` in the upper left corner of the Steam window.
+2.  From the dropdown menu, select `Settings`.
+3.  In the Settings window, select `In-Game`.
+4.  Uncheck the box next to `Enable the Steam Overlay while in-game`.
+5.  Click `OK` to save your changes.
+
+By disabling these overlays, you can reduce the load on your system, potentially fixing mouse stuttering in game.
+
+## 4\. Disable Startup Items
+
+<img decoding="async" width="827" height="737" src="/images/posts/game-stutters-when-moving-mouse/disable-startup-items-macos.png" alt="Alt attribute missing" srcset="/images/posts/game-stutters-when-moving-mouse/disable-startup-items-macos.png 827w, /images/posts/game-stutters-when-moving-mouse/disable-startup-items-macos-768x684.png 768w" sizes="(max-width: 827px) 100vw, 827px" />
+
+Startup items are programs that automatically run when you boot up your PC. While some of these are essential for your system's functionality, others might be unnecessary and could slow down your PC, potentially causing game stuttering when you move your mouse.
+
+Disabling unnecessary startup items can free up system resources, leading to a smoother gaming experience. Here's how you can do it:
+
+### Windows 10 Users
+
+1.  Press `Ctrl + Shift + Esc` to open the Task Manager.
+2.  Click on the `Startup` tab to see a list of all the programs that start up with your PC.
+3.  To disable a program, right-click on it and select `Disable`.
+
+Remember, you should only disable programs that you recognize and know are not necessary for your system's functionality. If you're unsure about a program, it's best to leave it enabled or do some research before disabling it.
+
+### Mac Users
+
+1.  Click on the Apple menu and select `System Preferences`.
+2.  Click on `General`.
+3.  Click on `Login Items` to see a list of all the programs that start up with your Mac.
+4.  To disable a program, select it and then click on the `-` button.
+
+Again, only disable programs that you know are not necessary for your system's functionality.
+
+By disabling unnecessary startup items, you can ensure that your PC's resources are used efficiently, potentially fixing game stutters when you move your mouse. In some cases you may need to uninstall software.
+
+## 5\. Checking Your Hardware
+
+In some cases, the issue might be with your hardware. This could be anything from hardware faults to not meeting the requirements for the game you want to play. If your PC doesn't meet the minimum requirements for the game you're playing, you might experience stuttering. Similarly, if your wireless mouse's battery is low, it might not function correctly, leading to stuttering.
+
+To fix this, you can upgrade your hardware or replace your mouse's battery. If your PC doesn't meet the game's requirements, you might need to upgrade your graphics card or other components. If you're using a wireless mouse, make sure its battery is fully charged.
+
+Some more advance areas to pay attention to are your Hard Drive/Solid State Drive and PC thermals.
+
+## 6\. Reinstalling the Game
+
+If none of the above solutions work, you might need to reinstall the game. Sometimes, game files can become corrupted, leading to stuttering. Reinstalling the game can fix this issue.
+
+Before you reinstall the game, make sure to back up your save files. You can usually find these files in the game's folder in your PC's Documents directory. If it's not there, simply look up the game on Google and search for the save location.
+
+## 7\. Reinstalling Your Operating System
+
+If you've tried all the above solutions, and you're still experiencing game stuttering when moving your mouse, it might be time to consider reinstalling your operating system (OS). While this is a drastic measure, it can often solve persistent issues by giving you a fresh start.
+
+Before you proceed, remember that reinstalling your OS will erase all data on your system drive. Therefore, it's crucial to back up any important files before you begin. Here's a basic guide on how to reinstall your OS:
+
+### Windows 10 Users
+
+1.  Back up all important files to an external drive or cloud storage.
+2.  Go to `Settings` > `Update & Security` > `Recovery`.
+3.  Under `Reset this PC`, click `Get started`.
+4.  Choose `Remove everything`. This will remove all your personal files, apps, and settings.
+5.  Follow the on-screen instructions to complete the process.
+
+### Mac Users
+
+1.  Back up all important files to an external drive or cloud storage.
+2.  Restart your Mac and immediately press and hold `Command + R` to enter Recovery Mode.
+3.  Choose `Disk Utility` from the macOS Utilities window and click `Continue`.
+4.  Select your startup disk and click `Erase`.
+5.  After the process is complete, go back to the macOS Utilities window and choose `Reinstall macOS`.
+6.  Follow the on-screen instructions to complete the process.
+
+Reinstalling your OS is a significant step, but it can often solve stubborn issues that other solutions can't. However, it's always a good idea to seek professional advice before taking this step. If you're still experiencing stuttering after reinstalling your OS, it might be time to consider upgrading your hardware.
+
+## Conclusion
+
+Game stuttering can be a frustrating issue, but it's usually fixable. By updating your drivers, checking your mouse settings, disabling unnecessary overlays, checking your hardware, and reinstalling the game, you can enjoy a better experience.
+
+Remember, if you're still experiencing issues after trying these solutions, you might want to seek help from a professional. Other gamers might have experienced the same issue and found a solution that works for them.
+
+We hope this guide helps you fix game stutters when moving your mouse. Happy gaming!

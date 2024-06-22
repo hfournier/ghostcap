@@ -1,0 +1,65 @@
+---
+wpId: 8930
+title: 'How to Play Palworld with Friends'
+description: 'Welcome to the enchanting world of Palworld, where adventure and ...'
+type: post
+createdAt: 2024-01-21T19:54:29
+modifiedAt: 2024-01-21T19:54:33
+author: pedrotski
+categories:
+  - palworld
+featuredMedia:
+  id: 8933
+  src: "./play-palworld-with-friends-1.jpg"
+  alt: "play palworld with friends"
+---
+
+
+Welcome to the enchanting world of Palworld, where adventure and camaraderie await at every turn! If you're diving into the multiplayer experience but find yourself a bit lost, fear not! This guide is tailored to help newcomers navigate the multiplayer modes of Palworld with ease. Remember, the multiplayer aspect is still under development, which means you might encounter some rough seas along your journey. From unstable connections to unsynced enemy coordinates and various other glitches, brace yourself for an adventure that's as wild as it is exhilarating. Should you encounter any bugs, a quick game restart for both host and guest players usually does the trick.
+
+Without further ado, let's explore the two available methods to enjoy Palworld with friends or fellow adventurers worldwide.
+
+```html
+<style>a.no-border-on-hover, a.no-border-on-hover:hover { border-bottom: none !important; text-decoration: none !important; } </style>
+```
+ [![Game Host Bros Promo](@assets/images/posts/how-to-play-palworld-with-friends/gamehostbrospromoround.png)](https://www.gamehostbros.com/)
+
+## **How to Play Co-op Multiplayer**
+
+In Co-op Multiplayer mode, you can team up with up to 3 friends for a total of 4 players in a cooperative gameplay experience. Here's how to get started:
+
+### **For the Host Player:**
+
+1.  **Start the Adventure**: From the title screen, select "Start Game."
+2.  **Create Your World**: Opt to create a new world.
+3.  **Enable Multiplayer**: Turn the Multiplayer option to "ON" and confirm with "OK" to move on to character creation.
+4.  **Craft Your Character**: Customize your character to your liking and dive into the game.
+5.  **Share the Invite Code**: Open the main menu (ESC key or START button) and share the invite code with your guest players.
+6.  **Play While You Wait**: Continue your adventure while your friends join in.
+
+### **For the Guest Player:**
+
+1.  **Joining the Game**: Choose "Join Multiplayer Game(Invite Code)" from the title screen.
+2.  **Enter the Invite Code**: Input the code provided by your host to join their world.
+3.  **Create Your Character**: Follow the prompts to make your character and start playing in the host's world.
+
+**Please Note:**
+
+*   Your character data lives within the host's world save data.
+*   Guests can only play while the host's world is active.
+*   Character data cannot be transferred to other worlds.
+
+## **How to Play Multiplayer (Dedicated Server)**
+
+For those looking for a broader adventure, the Dedicated Server mode allows up to 32 players to connect and play together. Keep in mind, this feature is experimental and might be buggier and laggier than single-player or cooperative modes, especially with more players.
+
+**Getting Started:**
+
+1.  **Server Selection**: From the title screen, opt for "Join Multiplayer Game."
+2.  **Pick Your Server**: Choose from official or private servers to join and embark on your adventure.
+
+## **Troubleshooting in Multiplayer**
+
+As Palworld is in Early Access, expect some quirks along the way, such as non-functioning features or getting stuck in the game world. Should these issues arise, a game restart is often your best bet. Your feedback is invaluable during this phase, so don't hesitate to report bugs via the contact information provided in the game.
+
+This guide aims to make your Palworld multiplayer experience as smooth and enjoyable as possible. Whether you're teaming up with friends in Co-op mode or joining the bustling community on a Dedicated Server, adventure awaits at every corner. Welcome to Palworld, and happy adventuring!

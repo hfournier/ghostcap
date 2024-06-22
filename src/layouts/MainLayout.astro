@@ -1,0 +1,22 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+type Props = {
+  title: string;
+  description: string;
+  heading: string;
+};
+const { title, description, heading } = Astro.props;
+---
+
+<BaseLayout {title} {description}>
+  <section class="space-y-4 pb-24 pt-2">
+    <div
+      class="mb-16 rounded-xl bg-[image:linear-gradient(rgba(78_70_230_/_0.5),_rgba(78_70_230_/_0.5)),_url('/gcmback.jpg')] px-8 py-12">
+      <h1 class="font-black uppercase leading-tight text-white/80">
+        {heading}
+      </h1>
+    </div>
+    <slot />
+  </section>
+</BaseLayout>
