@@ -1,0 +1,47 @@
+---
+wpId: 8374
+title: 'How To Hide The CS2 Build Info Watermark'
+description: 'The CS2 build info watermark is a small text overlay ...'
+type: post
+createdAt: 2023-10-03T14:13:47
+modifiedAt: 2023-10-03T14:16:05
+author: pedrotski
+categories:
+  - counter-strike
+featuredMedia:
+  id: 8376
+  src: "./How-To-Hide-The-CS2-Build-Info-Watermark.jpg"
+  alt: "How To Hide The CS2 Build Info Watermark"
+---
+
+import { Image } from "astro:assets"
+
+import __cs2_build_info_watermark_jpg from "./cs2-build-info-watermark.jpg";
+
+
+The CS2 build info watermark is a small text overlay that displays the current version or build of the game. It provides quick information about which iteration of the game is currently running. This can be particularly useful for developers and players alike to identify specific versions, especially when addressing bugs or other issues.
+
+If you're not sure what I mean, here is a screenshot of the watermark I'm talking about.
+
+<Image decoding="async" width="1920" height="1080" alt="TODO: update alt text" sizes="(max-width: 1920px) 100vw, 1920px" src={__cs2_build_info_watermark_jpg} widths={[1920, 768, 1536]} />
+
+## How to Hide the Watermark
+
+If you find the Counter Strike 2 build info watermark distracting during regular gameplay, it can be easily hidden:
+
+1.  Open the game console. (This is usually accessed by pressing the tilde (~) key. [Video guide here](https://www.youtube.com/watch?v=TY59x-I6wUs&t=8s))
+2.  Enter the command: `r_show_build_info 0`
+3.  Press Enter.
+
+This will hide the watermark from your view. However, it's recommended to enable it again if you're experiencing issues or when you're about to report a bug.
+
+## Why is the Watermark Important?
+
+While some find the CS22 build info watermark distracting, there's a purpose behind its presence.
+
+1.  **Diagnostic Tool for Developers**: The primary reason for the watermark's existence is to aid the developers at Valve. When players report issues, the watermark allows the developers to instantly know which build the player is on. This speeds up the diagnostic process and helps in providing quicker solutions.
+2.  **Community Feedback**: As players share screenshots, videos, or stream their gameplay, the watermark provides an immediate reference point for the game's version. This helps in contextualizing feedback and understanding if certain issues are version-specific.
+
+## Conclusion
+
+The CS2 build info watermark, while seemingly insignificant, plays a crucial role in the game's development and improvement process. While players have the option to hide it, understanding its importance ensures that the gaming community and developers maintain effective communication, leading to a better gaming experience for all.

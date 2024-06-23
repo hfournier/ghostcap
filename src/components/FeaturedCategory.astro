@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import CardList from "./CardList.astro";
 import Card from "./Card.astro";
+import { getEntry } from "astro:content";
 
 type Props = {
   category: string;
@@ -12,11 +13,18 @@ type Props = {
 
 const { category, title, count, showFeatured = false } = Astro.props;
 
+const catEntry = await getEntry("categories", category);
+const subCatEntries = await getCollection(
+  "categories",
+  (cat) => cat.data.parentId === catEntry?.data.wpId
+);
+const categories = [...subCatEntries, catEntry].map((cat) => cat?.id);
+
 const latestPosts = await getCollection(
   "posts",
   (post) =>
     post.data.draft !== true &&
-    post.data.categories?.some((c) => c.id === category)
+    post.data.categories?.some((pCat) => categories.includes(pCat.id))
 );
 const sortedPosts = latestPosts
   .sort((a, b) => b.data.createdAt.valueOf() - a.data.createdAt.valueOf())

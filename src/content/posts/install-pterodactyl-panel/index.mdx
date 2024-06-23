@@ -1,0 +1,272 @@
+---
+wpId: 4065
+title: 'How To Install Pterodactyl Panel [EASY INSTALL SCRIPT]'
+description: 'Managing game servers has always been a tedious task. But ...'
+type: post
+createdAt: 2021-01-21T01:31:18
+modifiedAt: 2024-01-09T16:09:20
+author: pedrotski
+categories:
+  - hosting-guides
+featuredMedia:
+  id: 4092
+  src: "./How-To-Install-Pterodactyl-Panel.png"
+  alt: "How To Install Pterodactyl Panel"
+---
+
+import { Image } from "astro:assets"
+
+import __Pterodactyl_png from "./Pterodactyl.png";
+import __vultr_screenshot_minecraft_vps_png from "./vultr-screenshot-minecraft-vps.png";
+import __click_products_png from "./click-products.png";
+import __select_server_and_location_png from "./select-server-and-location.png";
+import __vultr_select_server_for_pterodactyl_png from "./vultr-select-server-for-pterodactyl.png";
+import __vultr_hostname_png from "./vultr-hostname.png";
+import __server_running_on_vultr_and_pterodactyl_png from "./server-running-on-vultr-and-pterodactyl.png";
+import __access_ssh_vultr_png from "./access-ssh-vultr.png";
+import __vultr_terminal_png from "./vultr-terminal.png";
+import __pterodactyl_script_install_png from "./pterodactyl-script-install.png";
+import __pterodactyl_wings_and_panel_install_png from "./pterodactyl-wings-and-panel-install.png";
+import __pterodactyl_login_page_png from "./pterodactyl-login-page.png";
+
+
+Managing game servers has always been a tedious task. But what If I told you there was an easier way to manage them all from one easy-to-use panel? Chances are, if you're here, you know about running game servers in a Window you don't accidentally want to close on Windows. Or how about running them as a mystery system service on Linux?
+
+Either way, this is going to make your setup, maintenance, and scheduling 1000% easier! In this guide, we will show you how to install Pterodactyl panel using an easy-to-follow Installation script. This is literally the fastest way to get Pterodactyl up and running on your VPS or Dedicated game server.
+
+## What Is Pterodactyl Panel?
+
+<Image decoding="async" width="2937" height="2017" alt="Pterodactyl" sizes="(max-width: 2937px) 100vw, 2937px" src={__Pterodactyl_png} widths={[2937, 300, 1024, 768, 1536, 2048]} />
+
+[Pterodactyl Panel](https://pterodactyl.io/) is an open-source container-based game server management panel that has the focus of ease of use and security in mind. What makes it different compared to other solutions out there, is it's modern. If you have ever used a game server panel before, they are generally old and clunky.
+
+Old and clunky software is not what you want for this decade of management software.
+
+You need fast, lean, and easy to use!
+
+But the one thing that makes Pterodactyl different is the helpful community and availability of eggs (Files that allow you to install different games) are able to be created easily. So chances are if you have an issue, you will easily find someone that is able to help you.
+
+Let's get into this Pterodactyl Install Script guide.
+
+## How To Install Pterodactyl Panel
+
+[https://www.youtube.com/watch?v=UVDY7jv8s\_0](https://www.youtube.com/watch?v=UVDY7jv8s_0 "Play video \"Pterodactyl Panel Installation Guide [Quick and Easy]\"")
+
+Video can't be loaded because JavaScript is disabled: [Pterodactyl Panel Installation Guide \[Quick and Easy\] (https://www.youtube.com/watch?v=UVDY7jv8s\_0)](https://www.youtube.com/watch?v=UVDY7jv8s_0 "Pterodactyl Panel Installation Guide [Quick and Easy]")
+
+Even if you have NEVER used Linux before, this will be EASY!
+
+**Depending on your skill level, I have broken this guide down into 2 sections.**
+
+*   I'm **just starting**. I need help setting up my server from scratch. **(Start at STEP 1)**
+*   Nah, bro, I'm a gun. I already have a server with Linux ready to go. **(Start at STEP 9)**
+
+Just skip to whatever step you need to.
+
+**Also a little warning:** Your server needs to be freshly installed before you start this. That means nothing on it. If you have installed software or games already, please reinstall the operating system.
+
+It also only supports the following operating systems.
+
+Operating System
+
+Version
+
+Supported
+
+[Ubuntu](https://ubuntu.com/)
+
+20.04
+
+✅
+
+22.04
+
+✅
+
+[Debian](https://www.debian.org/)
+
+10
+
+✅
+
+11
+
+✅
+
+12
+
+✅
+
+[Rocky Linux](https://rockylinux.org/)
+
+8
+
+✅
+
+9
+
+✅
+
+[AlmaLinux](https://almalinux.org/)
+
+8
+
+✅
+
+9
+
+✅
+
+I highly suggest that you use Ubuntu 22.04. It's designed for it, and there is also a bunch of support out there for beginners.
+
+### Step 1: Choose a server host
+
+To start with we are going to need a dedicated server or VPS. Of course, you can use whatever you want, but for this guide, we will be using [Vultr](https://www.ghostcap.com/vultr-review/). Some hosts install bloat on their servers and you may encounter errors. For me, Vultr works all the time without issue.
+
+To do this, go to [Vultr.com](https://www.ghostcap.com/get/vultr) and click "Deploy" on the top right-hand corner.
+
+![](@assets/images/posts/install-pterodactyl-panel/vultr-logo-white.png)
+
+Want $100 Free Vultr Credit?
+
+Use our link below to signup for your new game server and get $100 credit you can use.
+
+**No coupon required.**
+
+Simply click the link, signup and its automatically applied to your account!
+
+[Get $100 Vultr Credit Free!](https://www.ghostcap.com/get/vultr)
+
+Create an account and then go to the next step.
+
+<Image decoding="async" width="1718" height="1287" alt="vultr screenshot" sizes="(max-width: 1718px) 100vw, 1718px" src={__vultr_screenshot_minecraft_vps_png} widths={[1718, 300, 1024, 768, 1536]} />
+
+### Step 2: Decide what product to buy
+
+After you have created your [Vultr](https://www.ghostcap.com/vultr-review/) account. Click on "Products"
+
+<Image decoding="async" width="494" height="518" alt="click products" sizes="(max-width: 494px) 100vw, 494px" src={__click_products_png} widths={[494, 286, 24]} />
+
+### Step 3: Choose your server location
+
+Now we need to select the server type. For this, I generally suggest going with "Cloud Computer" or "High Frequency". These are both VPS servers. If you plan on having a big server, then select DEDICATED.
+
+Just remember that you can upgrade later if needed.
+
+Now let's select the location you want your server to be. The closer, the better, as you will have better ping/latency.
+
+<Image decoding="async" width="1274" height="1026" alt="select server and location" sizes="(max-width: 1274px) 100vw, 1274px" src={__select_server_and_location_png} widths={[1274, 300, 1024, 768]} />
+
+### Step 4: Pick your operating system
+
+Next, we need to select the Operating System we want to run on our server. Vultr calls this "Server Type". At the time of writing, select Ubuntu 20.04 as its "Long Term Support" operating system. This is what works best with our Pterodactyl install script.
+
+We also need to select the "Server Size". Keep in mind what game servers you want to install on Pterodactyl. For this guide, we will use a 55GB server as this will allow us to run a CS GO Server, a small Minecraft Server, and a few Discord bots with ease.
+
+<Image decoding="async" width="1248" height="984" alt="vultr select server for pterodactyl" sizes="(max-width: 1248px) 100vw, 1248px" src={__vultr_select_server_for_pterodactyl_png} widths={[1248, 300, 1024, 768]} />
+
+### Step 5: Enter a hostname
+
+Now we can actually skip the next few sections, but we need to fill out the hostname. For now, this can be used to differentiate your server.
+
+Now simply click deploy.
+
+<Image decoding="async" width="1297" height="783" alt="vultr hostname" sizes="(max-width: 1297px) 100vw, 1297px" src={__vultr_hostname_png} widths={[1297, 300, 1024, 768]} />
+
+### Step 6: Check your server is running
+
+After that is done. you will be taken back to the Products page. Wait until it is running and click your server name. This may take around 5 - 10 mins to deploy.
+
+<Image decoding="async" width="1380" height="300" alt="server running on vultr and pterodactyl" sizes="(max-width: 1380px) 100vw, 1380px" src={__server_running_on_vultr_and_pterodactyl_png} widths={[1380, 300, 1024, 768]} />
+
+### Step 7: Connect to your dedicated server
+
+All you need to do here is take note of your Username and Password.
+
+Once you have them. Click on the "Open console" button on the top right. This will open what is called a terminal window. This is accessing your server directly now.
+
+<Image decoding="async" width="1262" height="556" alt="access ssh vultr" sizes="(max-width: 1262px) 100vw, 1262px" src={__access_ssh_vultr_png} widths={[1262, 300, 1024, 768]} />
+
+### Step 8: Login to your dedicated server
+
+This is the last step for the starter install.
+
+After you open the console it should look like this where you can log in. Simply type your Username (Usually root) and your password. If it doesn't look like this, give it 5 more mins, as it may still be installing. If it still doesn't look like this, then click "Send CtrlAltDel" on the top right to reboot the machine.
+
+<Image decoding="async" width="1050" height="121" alt="vultr terminal" sizes="(max-width: 1050px) 100vw, 1050px" src={__vultr_terminal_png} widths={[1050, 300, 1024, 768]} />
+
+### Step 9: Run the Pterodactyl install script
+
+Once you have logged in to your server's console. We need to now run the Pterodactyl Install Script.
+
+All you need to do is to copy this and paste it into the terminal.
+
+> bash <(curl -s https://pterodactyl-installer.se)
+
+After that, press enter.
+
+<Image decoding="async" width="1047" height="455" alt="pterodactyl script install" sizes="(max-width: 1047px) 100vw, 1047px" src={__pterodactyl_script_install_png} widths={[1047, 300, 1024, 768]} />
+
+### Step 10: Fill out the options
+
+Now it's going to ask us what we would like to do. We want to install the Panel AND Wings. So that is option 2.
+
+The Panel is the web game server panel itself. Wings is the node daemon that runs the games (I will get more into what a node is later in the article). After you press enter. It's going to ask you to install things like
+
+*   Database name (You can just press enter)
+*   Username
+*   Password
+*   Time zone
+*   Email Address
+*   Username for admin account
+*   Names
+*   Password
+*   FQDN (This can be your IP address if you don't have a domain, get it from the Vultr panel)
+*   Configure firewall (Yes)
+*   Configure HTTPS (No)
+
+Then type Y to continue.
+
+It's going to take about 10–15 mins to finish.
+
+<Image decoding="async" width="1047" height="764" alt="pterodactyl wings and panel install" sizes="(max-width: 1047px) 100vw, 1047px" src={__pterodactyl_wings_and_panel_install_png} widths={[1047, 300, 1024, 768]} />
+
+### Step 11: Check advance settings like HTTPS and DB
+
+Now it's going to pop up asking if you would like to install MariaDB. If you know what this is, and you need it, install it. If not, select no.
+
+It will also ask if you want to configure UFW automatically. Select yes.
+
+Finally, it will ask if you want to configure HTTPS. If you didn't select an FQDN, just select no.
+
+Then proceed with the installation.
+
+### Step 12: Login to Pterodactyl
+
+Once it has finished. All you need to do is to enter your IP address into the address bar of your web browser.
+
+It should take about 10 seconds to load the first time, and then you should end up at this screen. If not, then something went wrong in the installation. Screenshot your console and post it up on the #tech-support channel on our Discord.
+
+<Image decoding="async" width="897" height="522" alt="pterodactyl login page" sizes="(max-width: 897px) 100vw, 897px" src={__pterodactyl_login_page_png} widths={[897, 300, 768]} />
+
+That's it. You're all done with the Pterodactyl Panel install. Now we need to add our node to our server.
+
+## How To Add A Node To Pterodactyl Panel
+
+When you log in to Pterodactyl for the first time, you will need to add a node. A node is simply what Pterodactyl calls your physical server. This will allow you to run your game server instances.
+
+[https://www.youtube.com/watch?v=ra9bx3DiFXw](https://www.youtube.com/watch?v=ra9bx3DiFXw "Play video \"How To Add A Node To Pterodactyl Panel [Have Multiple Servers]\"")
+
+Video can't be loaded because JavaScript is disabled: [How To Add A Node To Pterodactyl Panel \[Have Multiple Servers\] (https://www.youtube.com/watch?v=ra9bx3DiFXw)](https://www.youtube.com/watch?v=ra9bx3DiFXw "How To Add A Node To Pterodactyl Panel [Have Multiple Servers]")
+
+## Why Use The Pterodactyl Install Script?
+
+The installation script simply makes things easier. It takes a 30-min process and turns it into a 5-min job. It also has the added advantage of it's not as technical as the normal install. That's why it's great for people who are new to Linux.
+
+## Conclusion
+
+Now you should have a Pterodactyl panel installed. See, it wasn't that hard, was it?
+
+The Pterodactyl install script makes it really easy. Next up, you should check out some [Pterodactyl themes](https://www.ghostcap.com/pterodactyl-themes/) to make the panel your.
+
+To get games installed, simply follow one of our guides, such as our [Minecraft Server Guide](https://www.ghostcap.com/minecraft-server-setup-guide/). And remember, if you get stuck, come and join our Discord. There are lots of people that are willing to help you set up your [game servers](https://www.ghostcap.com/game-server-hosting/) on Pterodactyl.
