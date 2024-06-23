@@ -1,7 +1,7 @@
 ---
 wpId: 7261
-title: 'How To Setup FastDL (CSGO, GMOD, TF2, L4D)'
-description: 'Have you ever been excited to start a new game ...'
+title: "How To Setup FastDL (CSGO, GMOD, TF2, L4D)"
+description: "Have you ever been excited to start a new game ..."
 type: post
 createdAt: 2023-02-27T19:20:06
 modifiedAt: 2023-11-23T21:24:19
@@ -14,14 +14,13 @@ featuredMedia:
   alt: "How To Setup FastDL"
 ---
 
-import { Image } from "astro:assets"
+import { Image } from "astro:assets";
 
 import __custom_content_source_game_fastdl_jpg from "./custom-content-source-game-fastdl.jpg";
 import __DreamHost_Web_Panel_Users_Files_jpg from "./DreamHost-Web-Panel-Users-Files.jpg";
 import __fastdl_FTP_jpg from "./fastdl-FTP.jpg";
 import __fastdl_FTP_after_folders_are_created_jpg from "./fastdl-FTP-after-folders-are-created.jpg";
 import __fastdl_example_jpg from "./fastdl-example.jpg";
-
 
 Have you ever been excited to start a new game server filled with custom content, only to be met with frustrating download errors or error boxes?
 
@@ -35,7 +34,15 @@ So, get ready to level up your gaming experience and say goodbye to those pesky 
 
 ## What Exactly Is A FastDL Server?
 
-<Image decoding="async" width="1366" height="768" alt="TODO: update alt text" sizes="(max-width: 1366px) 100vw, 1366px" src={__custom_content_source_game_fastdl_jpg} widths={[1366, 768]} />
+<Image
+  decoding="async"
+  width="1366"
+  height="768"
+  alt="TODO: update alt text"
+  sizes="(max-width: 1366px) 100vw, 1366px"
+  src={__custom_content_source_game_fastdl_jpg}
+  widths={[1366, 768]}
+/>
 
 FastDL is simply a website that hosts all the custom content for your source game server.
 
@@ -43,11 +50,11 @@ For example, if you want to host a custom map on your server, the client has to 
 
 Here are some examples of what a FastDL looks like:
 
-*   https://surf.gcgfast.com/csgo/
-*   [https://www.gcgfast.com/csgo/](https://www.gcgfast.com/csgo/)
-*   [https://fastdl.gflclan.com/csgo](https://fastdl.gflclan.com/csgo)
-*   [https://kzgfast.com/csgo/](https://kzgfast.com/csgo/)
-*   [https://www.gcgfast.com/](https://www.gcgfast.com/)
+- https://surf.gcgfast.com/csgo/
+- [https://www.gcgfast.com/csgo/](https://www.gcgfast.com/csgo/)
+- [https://fastdl.gflclan.com/csgo](https://fastdl.gflclan.com/csgo)
+- [https://kzgfast.com/csgo/](https://kzgfast.com/csgo/)
+- [https://www.gcgfast.com/](https://www.gcgfast.com/)
 
 As you will notice most files are in .bz2 format. This is because they are compressed files.
 
@@ -69,13 +76,21 @@ No large gaming community uses FastDL on the same machine their game servers are
 
 ## How To Setup FastDL
 
-Setting up a FastDL is quite simple and is the same for most source games. For this example, I'm going to be using CSGO, uploading a custom map called bhop\_y.bsp, and [ranks for a Faceit levels plugin](https://forums.alliedmods.net/showthread.php?t=324610).
+Setting up a FastDL is quite simple and is the same for most source games. For this example, I'm going to be using CSGO, uploading a custom map called bhop_y.bsp, and [ranks for a Faceit levels plugin](https://forums.alliedmods.net/showthread.php?t=324610).
 
 This is going to be the same for most source games. In this tutorial, the root domain is going to be https://test.gcgfast.com
 
 ### Step 1. Log into your web server
 
-<Image decoding="async" width="1328" height="434" alt="DreamHost-Web-Panel-Users-Files" sizes="(max-width: 1328px) 100vw, 1328px" src={__DreamHost_Web_Panel_Users_Files_jpg} widths={[1328, 768]} />
+<Image
+  decoding="async"
+  width="1328"
+  height="434"
+  alt="DreamHost-Web-Panel-Users-Files"
+  sizes="(max-width: 1328px) 100vw, 1328px"
+  src={__DreamHost_Web_Panel_Users_Files_jpg}
+  widths={[1328, 768]}
+/>
 
 Log in to your web server using FTP. For this example, we are using [Dreamhost](https://www.ghostcap.com/get/dreamhost) but your web host would have provided you with these details. On Dreamhost, you can get your FTP details from here.
 
@@ -87,7 +102,15 @@ For you, it will be whatever your domain is set as.
 
 ### Step 2. Create a folder for the game
 
-<Image decoding="async" width="1231" height="855" alt="TODO: update alt text" sizes="(max-width: 1231px) 100vw, 1231px" src={__fastdl_FTP_jpg} widths={[1231, 768]} />
+<Image
+  decoding="async"
+  width="1231"
+  height="855"
+  alt="TODO: update alt text"
+  sizes="(max-width: 1231px) 100vw, 1231px"
+  src={__fastdl_FTP_jpg}
+  widths={[1231, 768]}
+/>
 
 We need to upload the custom content to the server. First, in the root directory of your website create a folder called csgo. If you're using another game then call this folder css, tf2, l4d2 etc.
 
@@ -97,11 +120,19 @@ This means our FastDL directory is [https://test.gcgfast.com/csgo](https://test.
 
 ### Step 3. Upload the custom content
 
-<Image decoding="async" width="1231" height="856" alt="fastdl FTP after folders are created" sizes="(max-width: 1231px) 100vw, 1231px" src={__fastdl_FTP_after_folders_are_created_jpg} widths={[1231, 768]} />
+<Image
+  decoding="async"
+  width="1231"
+  height="856"
+  alt="fastdl FTP after folders are created"
+  sizes="(max-width: 1231px) 100vw, 1231px"
+  src={__fastdl_FTP_after_folders_are_created_jpg}
+  widths={[1231, 768]}
+/>
 
 Now it's time to upload the custom content. This has to match the exact location and file path as it does on the game server itself.
 
-So for the map, we need to create a folder on the Fastdl called maps, and I'm going to upload the map bhop\_y.bsp to the folder.
+So for the map, we need to create a folder on the Fastdl called maps, and I'm going to upload the map bhop_y.bsp to the folder.
 
 This means the map is now located at [https://test.gcgfast.com/csgo/maps/](https://test.gcgfast.com/csgo/maps/).
 
@@ -113,7 +144,7 @@ As you can see the [plugin developer](https://forums.alliedmods.net/showthread.p
 
 ### Step 4. Configure your game server to look at your FastDL
 
-![Game-Host-Bros-My-CSGO-Server-Edit-File](@assets/images/posts/how-to-setup-fastdl/Game-Host-Bros-My-CSGO-Server-Edit-File.jpg)
+![Game-Host-Bros-My-CSGO-Server-Edit-File](Game-Host-Bros-My-CSGO-Server-Edit-File.jpg)
 
 Once we have uploaded our files and folders, we need to set our server to use the FastDL we have created.
 
@@ -126,7 +157,15 @@ Make sure there is no forward slash at the end of the URL.
 
 ### Step 5. Restart your game server and test
 
-<Image decoding="async" width="1592" height="898" alt="fastdl example" sizes="(max-width: 1592px) 100vw, 1592px" src={__fastdl_example_jpg} widths={[1592, 768, 1536]} />
+<Image
+  decoding="async"
+  width="1592"
+  height="898"
+  alt="fastdl example"
+  sizes="(max-width: 1592px) 100vw, 1592px"
+  src={__fastdl_example_jpg}
+  widths={[1592, 768, 1536]}
+/>
 
 Now you can restart your game server and connect. If you have the developer console enabled you can press the "~" button on your keyboard and check if the files are actually downloading.
 

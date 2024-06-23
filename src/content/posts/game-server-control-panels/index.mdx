@@ -1,7 +1,7 @@
 ---
 wpId: 6908
-title: 'Best Game Server Control Panels [Easily Manage Your Game Servers]'
-description: 'Back when I first started hosting game servers, I used ...'
+title: "Best Game Server Control Panels [Easily Manage Your Game Servers]"
+description: "Back when I first started hosting game servers, I used ..."
 type: post
 createdAt: 2022-10-25T23:13:10
 modifiedAt: 2024-01-09T16:09:57
@@ -14,13 +14,12 @@ featuredMedia:
   alt: "BEST GAME SERVER CONTROL PANELS"
 ---
 
-import { Image } from "astro:assets"
+import { Image } from "astro:assets";
 
 import __image_png from "./image.png";
 import __image_1_png from "./image-1.png";
 import __image_2_png from "./image-2.png";
 import __image_3_png from "./image-3.png";
-
 
 Back when I first started hosting game servers, I used to host them from the command line on Linux.
 
@@ -29,9 +28,16 @@ When it was just me doing everything, this wasn't an issue.
 However, once we started giving more users access to the server, things became a nightmare.
 
 ```html
-<style>a.no-border-on-hover, a.no-border-on-hover:hover { border-bottom: none !important; text-decoration: none !important; } </style>
+<style>
+  a.no-border-on-hover,
+  a.no-border-on-hover:hover {
+    border-bottom: none !important;
+    text-decoration: none !important;
+  }
+</style>
 ```
- [![Game Host Bros Promo](@assets/images/posts/game-server-control-panels/gamehostbrospromoround.png)](https://www.gamehostbros.com/)
+
+[![Game Host Bros Promo](gamehostbrospromoround.png)](https://www.gamehostbros.com/)
 
 Having to train and create ssh accounts for people to simply restart the server or perform updates wasn't going to scale at all.
 
@@ -41,7 +47,15 @@ Luckily today you can get a game server control panel with a nice web interface 
 
 ## [1\. Pterodactyl](https://pterodactyl.io/)
 
-<Image decoding="async" width="1591" height="1094" alt="pterodactyl panel" sizes="(max-width: 1591px) 100vw, 1591px" src={__image_png} widths={[1591, 768, 1536]} />
+<Image
+  decoding="async"
+  width="1591"
+  height="1094"
+  alt="pterodactyl panel"
+  sizes="(max-width: 1591px) 100vw, 1591px"
+  src={__image_png}
+  widths={[1591, 768, 1536]}
+/>
 
 When it comes to setting up a game server control panel, Pterodactyl should be your first choice.
 
@@ -61,21 +75,29 @@ You can also add plugins and custom themes to enhance your experience, but it ca
 
 **Pros**
 
-*   Adding users is easy and fast
-*   Faster than any panel out there
-*   Can quickly add more dedicated servers (nodes)
-*   Large community support Discord
-*   WHMCS Integration as part of additional features
+- Adding users is easy and fast
+- Faster than any panel out there
+- Can quickly add more dedicated servers (nodes)
+- Large community support Discord
+- WHMCS Integration as part of additional features
 
 **Cons**
 
-*   Hard to add plugins and expand features
-*   Setup is more difficult than it needs to be
-*   Lacks basic features such as automatic updates, Discord control out of the box
+- Hard to add plugins and expand features
+- Setup is more difficult than it needs to be
+- Lacks basic features such as automatic updates, Discord control out of the box
 
 ## [2\. WindowsGSM](https://windowsgsm.com/)
 
-<Image decoding="async" width="1101" height="648" alt="windowsgsm" sizes="(max-width: 1101px) 100vw, 1101px" src={__image_1_png} widths={[1101, 768]} />
+<Image
+  decoding="async"
+  width="1101"
+  height="648"
+  alt="windowsgsm"
+  sizes="(max-width: 1101px) 100vw, 1101px"
+  src={__image_1_png}
+  widths={[1101, 768]}
+/>
 
 If you're looking to get a game server quickly running on Windows, then take a look at this software.
 
@@ -91,18 +113,26 @@ As for file management, it just uses folders, so you can use FileZilla server to
 
 **Pros**
 
-*   The easiest way to start a server
-*   Discord control
+- The easiest way to start a server
+- Discord control
 
 **Cons**
 
-*   Limited when it comes to features
-*   No web interface
-*   Not suitable for big servers, more just friend-fit servers
+- Limited when it comes to features
+- No web interface
+- Not suitable for big servers, more just friend-fit servers
 
 ## [3\. WISP](https://wisp.gg/)
 
-<Image decoding="async" width="1022" height="866" alt="wisp panel" sizes="(max-width: 1022px) 100vw, 1022px" src={__image_2_png} widths={[1022, 768]} />
+<Image
+  decoding="async"
+  width="1022"
+  height="866"
+  alt="wisp panel"
+  sizes="(max-width: 1022px) 100vw, 1022px"
+  src={__image_2_png}
+  widths={[1022, 768]}
+/>
 
 If you're looking for a version of Pterodactyl with some more quality-of-life features out of the box, then WISP is your go-to choice.
 
@@ -120,18 +150,26 @@ The software is still in its infancy stage, so there are bugs to be expected.
 
 **Pros**
 
-*   Easy setup
-*   Tasteful features added to the default Ptero
-*   Never need to worry about panel maintenance
+- Easy setup
+- Tasteful features added to the default Ptero
+- Never need to worry about panel maintenance
 
 **Cons**
 
-*   Still has a few bugs
-*   Updates are non-existent
+- Still has a few bugs
+- Updates are non-existent
 
 ## [4\. TCAdmin](https://www.tcadmin.com/)
 
-<Image decoding="async" width="798" height="452" alt="TCadmin screenshot" sizes="(max-width: 798px) 100vw, 798px" src={__image_3_png} widths={[798, 768]} />
+<Image
+  decoding="async"
+  width="798"
+  height="452"
+  alt="TCadmin screenshot"
+  sizes="(max-width: 798px) 100vw, 798px"
+  src={__image_3_png}
+  widths={[798, 768]}
+/>
 
 I really hate that I have to put TCAdmin here but if you want to run a server with multiple users on Windows, this is one of the only viable ways you can do it.
 
@@ -149,13 +187,13 @@ For example, TCAmin is what hosts such as Streamline-Servers use.
 
 **Pros**
 
-*   Reliable
-*   Has been around for a long time
+- Reliable
+- Has been around for a long time
 
 **Cons**
 
-*   Outdated experience
-*   Community support is non-existent
+- Outdated experience
+- Community support is non-existent
 
 ## Other Game Server Control Panels
 
@@ -165,15 +203,15 @@ However, if for some reason they don't suit your needs, there are some other opt
 
 Here is my brief rundown on each software and why it didn't make the main list.
 
-*   **[AMP](https://cubecoders.com/AMP)** - Breaks a lot and takes over too much of the default game server settings
-*   **[Crafty Controller](https://craftycontrol.com/)** - Unfinished software that's not suitable for live servers
-*   **[GameAP](https://gameap.ru/en/)** - Outdated and has lots of security exploits
-*   **[Gametron](https://gametron.io/)** - I have not had a chance to test it yet but looks promising (but no HTTPS on their site?)
-*   **[LinuxGSM](https://linuxgsm.com/)** - No WebUI
-*   **[Multicraft](https://www.multicraft.org/)** - Not worth the price of a license compared to free offerings
-*   [**seDirector**](https://sedirector.net/) - Source games only
-*   **[OGP](https://www.opengamepanel.org/news.php)** - Outdated and lots of security exploits
-*   **[PufferPanel](https://www.pufferpanel.com/)** - Could not find a reason to use this over Pterodactyl
+- **[AMP](https://cubecoders.com/AMP)** - Breaks a lot and takes over too much of the default game server settings
+- **[Crafty Controller](https://craftycontrol.com/)** - Unfinished software that's not suitable for live servers
+- **[GameAP](https://gameap.ru/en/)** - Outdated and has lots of security exploits
+- **[Gametron](https://gametron.io/)** - I have not had a chance to test it yet but looks promising (but no HTTPS on their site?)
+- **[LinuxGSM](https://linuxgsm.com/)** - No WebUI
+- **[Multicraft](https://www.multicraft.org/)** - Not worth the price of a license compared to free offerings
+- [**seDirector**](https://sedirector.net/) - Source games only
+- **[OGP](https://www.opengamepanel.org/news.php)** - Outdated and lots of security exploits
+- **[PufferPanel](https://www.pufferpanel.com/)** - Could not find a reason to use this over Pterodactyl
 
 ## Conclusion
 
