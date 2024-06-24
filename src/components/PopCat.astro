@@ -1,6 +1,6 @@
 ---
 type Props = {
-  categories: string[];
+  categories: { name: string; link: string }[];
 };
 const { categories } = Astro.props;
 ---
@@ -14,8 +14,8 @@ const { categories } = Astro.props;
         <li class="">
           <a
             class="rounded-md bg-zinc-950 px-8 py-4 font-bold uppercase text-white"
-            href="#">
-            {category}
+            href={category.link}>
+            {category.name}
           </a>
         </li>
       ))

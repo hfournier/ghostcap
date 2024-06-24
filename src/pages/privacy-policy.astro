@@ -1,5 +1,5 @@
 ---
-import MainLayout from "@layouts/MainLayout.astro";
+import PageLayout from "@layouts/PageLayout.astro";
 
 const wpId = 5533;
 const title = "Privacy Policy";
@@ -12,7 +12,7 @@ const modifiedAt = new Date("2022-02-02T15:33:52");
 const author = "pedrotski";
 ---
 
-<MainLayout {title} {description} heading="Privacy Policy">
+<PageLayout {title} {description} heading="Privacy Policy">
   <p>
     At GhostCap, accessible from <a class="text-cyan-500" href="/"
       >https://www.ghostcap.com/</a
@@ -252,4 +252,4 @@ const author = "pedrotski";
     contact us immediately and we will do our best efforts to promptly remove
     such information from our records.
   </p>
-</MainLayout>
+</PageLayout>

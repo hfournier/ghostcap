@@ -31,16 +31,10 @@ const sortedPosts = latestPosts
   .slice(0, count);
 ---
 
-<CardList {title}>
+<CardList {title} link={`/${category}`}>
   {
     sortedPosts.map((post, i) => (
-      <Card
-        title={post.data.title}
-        pubDate={post.data.createdAt}
-        image={post.data.featuredMedia?.src}
-        imageAlt={post.data.featuredMedia?.alt}
-        featured={i == 0 && showFeatured}
-      />
+      <Card {post} featured={i == 0 && showFeatured} />
     ))
   }
 </CardList>

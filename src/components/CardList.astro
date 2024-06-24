@@ -1,16 +1,19 @@
 ---
 type Props = {
   title: string;
+  link: string;
 };
 
-const { title } = Astro.props;
+const { title, link } = Astro.props;
 ---
 
 <section class="py-12">
-  <h2
-    class="my-6 border-l-[5px] border-indigo-700 py-0 pl-4 font-black uppercase text-white">
-    {title}
-  </h2>
+  <a href={link}>
+    <h2
+      class="my-6 border-l-[5px] border-indigo-700 py-0 pl-4 font-black uppercase text-white">
+      {title}
+    </h2>
+  </a>
   <div class="grid grid-cols-4 gap-x-12 gap-y-20">
     <slot />
   </div>

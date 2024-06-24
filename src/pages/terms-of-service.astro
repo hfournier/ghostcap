@@ -1,5 +1,5 @@
 ---
-import MainLayout from "@layouts/MainLayout.astro";
+import PageLayout from "@layouts/PageLayout.astro";
 
 const wpId = 5531;
 const title = "Terms Of Service";
@@ -12,7 +12,7 @@ const modifiedAt = new Date("2022-02-02T15:29:56");
 const author = "pedrotski";
 ---
 
-<MainLayout {title} {description} heading="Terms Of Service">
+<PageLayout {title} {description} heading="Terms Of Service">
   <h2 class="font-bold">1. Terms</h2>
 
   <p>
@@ -120,4 +120,4 @@ const author = "pedrotski";
     Any claim related to GhostCap's Website shall be governed by the laws of au
     without regard to its conflict of law provisions.
   </p>
-</MainLayout>
+</PageLayout>

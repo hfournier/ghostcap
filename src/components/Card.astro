@@ -1,17 +1,17 @@
 ---
 import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
 
 type Props = {
-  title: string;
-  pubDate: Date;
-  image?: ImageMetadata;
-  imageAlt?: string;
+  post: CollectionEntry<"posts">;
   featured?: boolean;
+  eager?: boolean;
 };
-const { title, pubDate, image, imageAlt, featured = false } = Astro.props;
+const { post, featured = false, eager = false } = Astro.props;
 ---
 
-<div
+<a
+  href={`/${post.slug}`}
   class:list={[
     "flex items-center transition-transform duration-500 hover:-translate-y-2 hover:opacity-90",
     { "flex-col": !featured },
@@ -20,25 +20,26 @@ const { title, pubDate, image, imageAlt, featured = false } = Astro.props;
     { "gap-16": featured },
   ]}>
   {
-    image && imageAlt && (
+    post.data.featuredMedia && post.data.featuredMedia.alt && (
       <Image
         class:list={["rounded-xl", { "w-[calc(50%-20px)]": featured }]}
-        src={image}
-        alt={imageAlt}
+        src={post.data.featuredMedia.src}
+        alt={post.data.featuredMedia.alt}
+        loading={eager ? "eager" : "lazy"}
       />
     )
   }
   {
-    !image && !imageAlt && (
+    !post.data.featuredMedia && (
       <div class="aspect-video w-full rounded-xl bg-zinc-700" />
     )
   }
   <div class="flex flex-col gap-1">
     <time
       class="text-sm text-zinc-500"
-      datetime={new Date(pubDate).toISOString()}
+      datetime={new Date(post.data.createdAt).toISOString()}
       >{
-        new Date(pubDate).toLocaleDateString(undefined, {
+        new Date(post.data.createdAt).toLocaleDateString(undefined, {
           month: "long",
           day: "numeric",
           year: "numeric",
@@ -46,6 +47,6 @@ const { title, pubDate, image, imageAlt, featured = false } = Astro.props;
         })
       }</time
     >
-    <h3 class="text-lg font-medium text-white">{title}</h3>
+    <h3 class="text-lg font-medium text-white">{post.data.title}</h3>
   </div>
-</div>
+</a>

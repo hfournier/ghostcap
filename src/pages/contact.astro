@@ -1,5 +1,5 @@
 ---
-import MainLayout from "@layouts/MainLayout.astro";
+import PageLayout from "@layouts/PageLayout.astro";
 
 const wpId = 5646;
 const title = "Contact";
@@ -11,7 +11,7 @@ const modifiedAt = new Date("2023-05-07T17:00:36");
 const author = "pedrotski";
 ---
 
-<MainLayout {title} {description} heading="Contact">
+<PageLayout {title} {description} heading="Contact">
   <p>Thanks for wanting to get in touch.</p>
 
   <p>
@@ -55,4 +55,4 @@ const author = "pedrotski";
 <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
 </code>
 </pre> -->
-</MainLayout>
+</PageLayout>

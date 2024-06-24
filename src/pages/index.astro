@@ -13,21 +13,35 @@ const description =
 
 <BaseLayout {title} {description}>
   <Hero />
-  <Latest />
-  <StartNow />
-  <FeaturedCategory category="gaming" title="Gaming" count={4} />
-  <PopCat categories={["Counter Strike", "Minecraft", "Rust", "Valorant"]} />
-  <FeaturedCategory
-    category="server-hosting"
-    title="Server Hosting"
-    count={5}
-    showFeatured={true}
-  />
-  <PopCat categories={["Hosting Guides", "Hosting Reviews"]} />
-  <FeaturedCategory
-    category="hardware"
-    title="Hardware"
-    count={5}
-    showFeatured={true}
-  />
+  <main class="space-y-6">
+    <Latest />
+    <StartNow />
+    <FeaturedCategory category="gaming" title="Gaming" count={4} />
+    <PopCat
+      categories={[
+        { name: "Counter Strike", link: "/gaming/counter-strike" },
+        { name: "Minecraft", link: "/gaming/minecraft" },
+        { name: "Rust", link: "/gaming/rust" },
+        { name: "Valorant", link: "/gaming/valorant" },
+      ]}
+    />
+    <FeaturedCategory
+      category="server-hosting"
+      title="Server Hosting"
+      count={5}
+      showFeatured={true}
+    />
+    <PopCat
+      categories={[
+        { name: "Hosting Guides", link: "/server-hosting/hosting-guides" },
+        { name: "Hosting Reviews", link: "/server-hosting/hosting-reviews" },
+      ]}
+    />
+    <FeaturedCategory
+      category="hardware"
+      title="Hardware"
+      count={5}
+      showFeatured={true}
+    />
+  </main>
 </BaseLayout>
