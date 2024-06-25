@@ -24,7 +24,7 @@ const { post, featured = false, eager = false } = Astro.props;
       <Image
         class:list={["rounded-xl", { "w-[calc(50%-20px)]": featured }]}
         src={post.data.featuredMedia.src}
-        alt={post.data.featuredMedia.alt}
+        alt={post.data.featuredMedia.alt || ""}
         loading={eager ? "eager" : "lazy"}
       />
     )
