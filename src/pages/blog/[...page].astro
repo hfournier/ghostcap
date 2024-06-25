@@ -37,7 +37,7 @@ const { page } = Astro.props;
           {
             page.data.map((post) => (
               <li class="rounded-md bg-zinc-900">
-                <a class="" href={post.slug}>
+                <a class="" href={`/${post.slug}`}>
                   <BlogCard {post} />
                 </a>
               </li>
