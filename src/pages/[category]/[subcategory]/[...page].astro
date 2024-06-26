@@ -1,0 +1,70 @@
+---
+import CatCard from "@components/CatCard.astro";
+import Pagination from "@components/Pagination.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import type { GetStaticPaths } from "astro";
+import { getCollection, getEntry } from "astro:content";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const subCategories = await getCollection(
+    "categories",
+    (cat) => cat.data.parentId !== 0
+  );
+  const parentCategories = await getCollection(
+    "categories",
+    (cat) => cat.data.parentId === 0
+  );
+  const entries = await getCollection(
+    "posts",
+    (post) => post.data.draft !== true
+  );
+  return subCategories.flatMap((subCategory) => {
+    const posts = entries
+      .filter((post) =>
+        post.data.categories?.some((c) => c.id === subCategory.id)
+      )
+      .sort((a, b) => b.data.createdAt.valueOf() - a.data.createdAt.valueOf());
+    return paginate(posts, {
+      params: {
+        subcategory: subCategory.id,
+        category: parentCategories.find(
+          (cat) => cat.data.wpId === subCategory.data.parentId
+        )?.id,
+      },
+      pageSize: 10,
+    });
+  });
+}) satisfies GetStaticPaths;
+
+const { subcategory: subCategoryId } = Astro.params;
+const subCategory = await getEntry("categories", subCategoryId);
+const { page } = Astro.props;
+---
+
+<BaseLayout
+  title={subCategory.data.name}
+  description={subCategory.data.description}>
+  <div
+    class="flex flex-col items-center justify-center gap-4 rounded-lg bg-zinc-900 py-12">
+    <h1 class="text-4xl font-black uppercase">{subCategory.data.name}</h1>
+    <div class="text-sm uppercase tracking-wider">
+      {subCategory.data.description}
+    </div>
+  </div>
+  <div class="grid grid-cols-2 gap-8 py-4">
+    {
+      page.data.map((post) => (
+        <a href={`/${post.slug}`}>
+          <CatCard {post} />
+        </a>
+      ))
+    }
+  </div>
+  <Pagination
+    prevUrl={page.url.prev}
+    nextUrl={page.url.next}
+    currentUrl={page.url.current}
+    currentPage={page.currentPage}
+    lastPage={page.lastPage}
+  />
+</BaseLayout>

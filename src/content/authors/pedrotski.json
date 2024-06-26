@@ -9,5 +9,16 @@
     "24": "https://secure.gravatar.com/avatar/78831151222100808d0005dd4596f1ae?s=24&d=mm&r=g",
     "48": "https://secure.gravatar.com/avatar/78831151222100808d0005dd4596f1ae?s=48&d=mm&r=g",
     "96": "https://secure.gravatar.com/avatar/78831151222100808d0005dd4596f1ae?s=96&d=mm&r=g"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/power2tp/",
+    "youtube": "https://www.youtube.com/c/GhostCapGaming",
+    "twitch": "https://www.twitch.tv/pedrotski",
+    "twitter": "https://twitter.com/ghostcap",
+    "discord": "https://discord.com/servers/ghostcap-255662502510198784"
+  },
+  "featuredMedia": {
+    "src": "@assets/authors/pedrotski-playing-games-high.jpg",
+    "alt": "Pedrotski playing games high"
   }
 }

@@ -3,14 +3,24 @@ import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 
 import league from "@assets/league.png";
+
+type Props = {
+  showLeague: boolean;
+};
+
+const { showLeague = true } = Astro.props;
 ---
 
 <section
   class="relative space-y-4 rounded-xl bg-[image:linear-gradient(rgba(8_10_13_/_0.7),_rgba(8_10_13_/_0.7)),_url('/Valorant-Xbox-Series-X-1280x720-1.webp')] p-8">
-  <h2 class="font-semibold uppercase leading-tight text-white/80">
+  <h2 class="font-semibold uppercase leading-tight text-white">
     EVER WANTED TO START YOUR OWN GAME SERVER?
   </h2>
-  <div class="max-w-[70%] leading-tight tracking-wider text-white/80">
+  <div
+    class:list={[
+      "leading-tight tracking-wider text-zinc-300",
+      { "max-w-[70%]": showLeague },
+    ]}>
     When we started playing online games with our friends, we knew we needed a
     good game server. But finding one that delivered what gaming communities
     need was harder than we thought. That's why we decided to start our own game
@@ -23,5 +33,14 @@ import league from "@assets/league.png";
     >
     <Icon class="size-6" name="fa:long-arrow-right" />
   </div>
-  <Image class="absolute right-0 top-0" src={league} alt="League" width={400} />
+  {
+    showLeague && (
+      <Image
+        class="absolute right-0 top-0"
+        src={league}
+        alt="League"
+        width={400}
+      />
+    )
+  }
 </section>

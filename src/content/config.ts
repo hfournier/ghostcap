@@ -14,9 +14,7 @@ const Content = ({ image }: SchemaContext) =>
     createdAt: z.date(),
     modifiedAt: z.date(),
     author: reference("authors").optional(),
-    authorId: z.number().optional(),
     categories: z.array(reference("categories")).optional(),
-    categoryIds: z.array(z.number()).optional(),
     tagIds: z.array(z.number()).optional(),
     featuredMedia: z
       .object({
@@ -28,21 +26,38 @@ const Content = ({ image }: SchemaContext) =>
       .optional(),
   });
 
-const Author = z.object({
-  wpId: z.number(),
-  name: z.string(),
-  url: z.string().optional(),
-  description: z.string(),
-  link: z.string().url().optional(),
-  slug: z.string().optional(),
-  avatar_urls: z
-    .object({
-      24: z.string().url(),
-      48: z.string().url(),
-      96: z.string().url(),
-    })
-    .optional(),
-});
+const Author = ({ image }: SchemaContext) =>
+  z.object({
+    wpId: z.number(),
+    name: z.string(),
+    url: z.string().optional(),
+    description: z.string(),
+    link: z.string().url().optional(),
+    slug: z.string().optional(),
+    avatar_urls: z
+      .object({
+        24: z.string().url(),
+        48: z.string().url(),
+        96: z.string().url(),
+      })
+      .optional(),
+    social: z
+      .object({
+        facebook: z.string().url().optional(),
+        youtube: z.string().url().optional(),
+        twitch: z.string().url().optional(),
+        twitter: z.string().url().optional(),
+        discord: z.string().url().optional(),
+      })
+      .optional(),
+    featuredMedia: z
+      .object({
+        src: image(),
+        alt: z.string(),
+        caption: z.string().optional(),
+      })
+      .optional(),
+  });
 
 const Category = z.object({
   wpId: z.number(),

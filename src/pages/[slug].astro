@@ -2,6 +2,10 @@
 import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import { getEntry } from "astro:content";
+import { Icon } from "astro-icon/components";
+import StartNow from "@components/StartNow.astro";
 
 export const getStaticPaths = (async () => {
   const entries = await getCollection(
@@ -15,12 +19,111 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content, headings } = await entry.render();
+
+const author = await getEntry(entry.data.author!);
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description}>
   <main class="">
-    <div class="text-5xl font-black">{entry.data.title}</div>
-    <Content />
+    <article>
+      <div
+        class="grid grid-cols-[auto_auto] place-items-center pb-52 pt-40"
+        style={`background: radial-gradient(ellipse at 50% 0%, rgba(32, 8, 140, 0.75) 1%, #0F1011 76%), url(${entry.data.featuredMedia?.src.src}); background-size: cover; background-repeat: no-repeat; background-position: center;`}>
+        <div class="flex flex-col gap-4">
+          <div class="">
+            <a class="text-sm uppercase text-cyan-500" href="#">Hardware</a>
+          </div>
+          <h1 class="text-4xl font-black uppercase text-white">
+            {entry.data.title}
+          </h1>
+          <div class="flex items-center gap-4">
+            {
+              entry.data.featuredMedia && (
+                <Image
+                  class="size-10 rounded-2xl sm:size-12 md:size-14 lg:size-16"
+                  src={author.data.featuredMedia?.src!}
+                  alt={author.data.name}
+                  height={96}
+                  width={96}
+                  loading={"eager"}
+                />
+              )
+            }
+            <div class="flex items-center gap-1">
+              <Icon class="size-5" name="mdi:user" />
+              <a
+                class="text-sm uppercase tracking-widest text-cyan-500"
+                href={`/author/${author.data.slug}`}>{author?.data.name}</a
+              >
+            </div>
+            <div class="flex items-center gap-1">
+              <Icon class="size-5" name="mdi:calendar" />
+              <time
+                class="text-sm uppercase tracking-widest text-zinc-200"
+                datetime={new Date(entry.data.createdAt).toISOString()}
+                >{
+                  new Date(entry.data.createdAt).toLocaleDateString(undefined, {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric",
+                    timeZone: "UTC",
+                  })
+                }</time
+              >
+            </div>
+            <div class="flex items-center gap-1">
+              <Icon class="size-5" name="mdi:clock-time-nine-outline" />
+              <span class="text-sm uppercase tracking-widest text-zinc-200"
+                >Read time</span
+              >
+            </div>
+          </div>
+        </div>
+        {
+          entry.data.featuredMedia && (
+            <Image
+              class="rounded-xl"
+              src={entry.data.featuredMedia?.src}
+              alt={entry.data.featuredMedia?.alt || ""}
+            />
+          )
+        }
+      </div>
+      <div class="-mt-24 grid grid-cols-[minmax(0,_3fr)_minmax(0,_1fr)] gap-8">
+        <div
+          class="prose prose-zinc lg:prose-md prose-invert prose-a:underline-offset-4 prose-a:text-inherit prose-code:after:content-[''] prose-code:before:content-[''] prose-a:font-normal prose-a:decoration-lime-500 prose-a:decoration-2 hover:prose-a:bg-lime-500 hover:prose-a:text-zinc-900 prose-code:text-pink-500 prose-ol:list-none prose-ol:relative prose-ol:pl-6 prose-ol:ml-6 w-full max-w-none py-8 [&_ol>li]:before:absolute [&_ol>li]:before:-left-3 [&_ol>li]:before:size-7 [&_ol>li]:before:rounded-full [&_ol>li]:before:bg-lime-500 [&_ol>li]:before:text-center [&_ol>li]:before:leading-7 [&_ol>li]:before:text-zinc-950 [&_ol>li]:before:content-[counter(list-item)] [&_ul>li]:marker:text-lime-500">
+          <Content />
+        </div>
+        <aside class="space-y-8">
+          <StartNow showLeague={false} />
+          <div class="rounded-xl bg-zinc-900">
+            <header
+              class="rounded-t-xl bg-indigo-600 px-6 py-8 text-sm uppercase tracking-widest text-white">
+              In this article
+            </header>
+            <ul class="flex flex-col gap-1.5 p-4">
+              {
+                headings.map((heading) => (
+                  <li
+                    class:list={[
+                      "leading-3",
+                      { "pl-3": heading.depth === 2 },
+                      { "pl-6": heading.depth === 3 },
+                      { "pl-9": heading.depth > 3 },
+                    ]}>
+                    <a
+                      class="text-sm text-cyan-500 underline-offset-2 hover:underline"
+                      href={`#${heading.slug}`}>
+                      {heading.text}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </article>
   </main>
 </BaseLayout>

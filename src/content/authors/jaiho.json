@@ -9,5 +9,9 @@
     "24": "https://secure.gravatar.com/avatar/79a9ffb081f5c6c865259532220ebb69?s=24&d=mm&r=g",
     "48": "https://secure.gravatar.com/avatar/79a9ffb081f5c6c865259532220ebb69?s=48&d=mm&r=g",
     "96": "https://secure.gravatar.com/avatar/79a9ffb081f5c6c865259532220ebb69?s=96&d=mm&r=g"
+  },
+  "featuredMedia": {
+    "src": "@assets/authors/jaiho-ghostcap.jpg",
+    "alt": "Jaiho GhostCap"
   }
 }

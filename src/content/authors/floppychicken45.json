@@ -9,5 +9,13 @@
     "24": "https://secure.gravatar.com/avatar/75bdd316a809815dca51261b7454d045?s=24&d=mm&r=g",
     "48": "https://secure.gravatar.com/avatar/75bdd316a809815dca51261b7454d045?s=48&d=mm&r=g",
     "96": "https://secure.gravatar.com/avatar/75bdd316a809815dca51261b7454d045?s=96&d=mm&r=g"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/AngusMiles2",
+    "youtube": "https://www.youtube.com/@Floppychicken45"
+  },
+  "featuredMedia": {
+    "src": "@assets/authors/asian_prince-1.jpg",
+    "alt": "Floppychicken45"
   }
 }

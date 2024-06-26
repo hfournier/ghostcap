@@ -1,4 +1,6 @@
 ---
+import { Icon } from "astro-icon/components";
+
 export interface Props {
   prevUrl?: string;
   currentUrl: string;
@@ -38,92 +40,82 @@ const paginationList: number[] =
       : [...paginationLeft, currentPage, ...paginationRight];
 ---
 
-<nav class="mx-auto flex items-center justify-center gap-3 p-0 py-6">
-  {
-    prevUrl && (
-      <a
-        class="rounded-md bg-zinc-200 px-4 py-3 text-sm text-indigo-600 no-underline hover:shadow-md"
-        href={prevUrl}
-        aria-label="Previous Page">
-        « Prev
-      </a>
-    )
-  }
-  {
-    currentPage === firstPage ? (
-      <span class="min-w-[1.5rem] rounded border border-zinc-500 px-4 py-3 text-center text-sm text-zinc-500">
-        {firstPage}
-      </span>
-    ) : (
-      <a
-        class="min-w-[1.5rem] rounded-md bg-zinc-200 px-4 py-3 text-center text-sm text-indigo-600 no-underline hover:shadow-md data-[page='0']:hidden"
-        data-page={firstPage}
-        href={currentUrl.replace(regexpPageNumber, "")}>
-        {firstPage}
-      </a>
-    )
-  }
-  {
-    paginationList.length > 0 && paginationList[0] !== 2 && (
-      <span class="py-3 text-center text-sm text-zinc-500">...</span>
-    )
-  }
-
-  {
-    paginationList.map((i) =>
-      i === currentPage ? (
-        <span class="min-w-[1.5rem] rounded border border-zinc-500 px-4 py-3 text-center text-sm text-zinc-500">
-          {i}
+{
+  paginationList.length > 0 && (
+    <nav class="mx-auto flex items-center justify-center gap-3 p-0 py-6">
+      {prevUrl && (
+        <a
+          class="rounded-md bg-zinc-900 p-3 text-sm text-indigo-500 no-underline hover:shadow-md"
+          href={prevUrl}
+          aria-label="Previous Page">
+          <Icon name="mdi:navigate-before" class="size-5" />
+        </a>
+      )}
+      {currentPage === firstPage ? (
+        <span class="min-w-[1.5rem] rounded border border-zinc-800 px-4 py-3 text-center text-sm text-indigo-500">
+          {firstPage}
         </span>
       ) : (
         <a
-          class="min-w-[1.5rem] rounded-md bg-zinc-200 px-4 py-3 text-center text-sm text-indigo-600 no-underline hover:shadow-md data-[page='0']:hidden"
-          data-page={i}
-          href={
-            i === 1
-              ? currentUrl.replace(regexpPageNumber, "")
-              : currentUrl.match(regexpPageNumber)
-                ? currentUrl.replace(regexpPageNumber, `/${i}`)
-                : `${currentUrl}/${i}`
-          }>
-          {i}
+          class="min-w-[1.5rem] rounded-md bg-zinc-900 px-4 py-3 text-center text-sm text-indigo-500 no-underline hover:shadow-md data-[page='0']:hidden"
+          data-page={firstPage}
+          href={currentUrl.replace(regexpPageNumber, "")}>
+          {firstPage}
         </a>
-      )
-    )
-  }
-
-  {
-    paginationList.length > 0 &&
-      paginationList[paginationList.length - 1] !== lastPage - 1 && (
+      )}
+      {paginationList.length > 0 && paginationList[0] !== 2 && (
         <span class="py-3 text-center text-sm text-zinc-500">...</span>
-      )
-  }
-  {
-    currentPage === lastPage ? (
-      <span class="min-w-[1.5rem] rounded border border-zinc-500 px-4 py-3 text-center text-sm text-zinc-500">
-        {lastPage}
-      </span>
-    ) : (
-      <a
-        class="min-w-[1.5rem] rounded-md bg-zinc-200 px-4 py-3 text-center text-sm text-indigo-600 no-underline hover:shadow-md data-[page='0']:hidden"
-        data-page={lastPage}
-        href={
-          currentUrl.match(regexpPageNumber)
-            ? currentUrl.replace(regexpPageNumber, `/${lastPage}`)
-            : `${currentUrl}/${lastPage}`
-        }>
-        {lastPage}
-      </a>
-    )
-  }
-  {
-    nextUrl && (
-      <a
-        class="rounded-md bg-zinc-200 px-4 py-3 text-sm text-indigo-600 no-underline hover:shadow-md"
-        href={nextUrl}
-        aria-label="Next Page">
-        Next »
-      </a>
-    )
-  }
-</nav>
+      )}
+
+      {paginationList.map((i) =>
+        i === currentPage ? (
+          <span class="min-w-[1.5rem] rounded border border-zinc-800 px-4 py-3 text-center text-sm text-indigo-500">
+            {i}
+          </span>
+        ) : (
+          <a
+            class="min-w-[1.5rem] rounded-md bg-zinc-900 px-4 py-3 text-center text-sm text-indigo-500 no-underline hover:shadow-md data-[page='0']:hidden"
+            data-page={i}
+            href={
+              i === 1
+                ? currentUrl.replace(regexpPageNumber, "")
+                : currentUrl.match(regexpPageNumber)
+                  ? currentUrl.replace(regexpPageNumber, `/${i}`)
+                  : `${currentUrl}/${i}`
+            }>
+            {i}
+          </a>
+        )
+      )}
+
+      {paginationList.length > 0 &&
+        paginationList[paginationList.length - 1] !== lastPage - 1 && (
+          <span class="py-3 text-center text-sm text-zinc-500">...</span>
+        )}
+      {currentPage === lastPage ? (
+        <span class="min-w-[1.5rem] rounded border border-zinc-800 px-4 py-3 text-center text-sm text-indigo-500">
+          {lastPage}
+        </span>
+      ) : (
+        <a
+          class="min-w-[1.5rem] rounded-md bg-zinc-900 px-4 py-3 text-center text-sm text-indigo-500 no-underline hover:shadow-md data-[page='0']:hidden"
+          data-page={lastPage}
+          href={
+            currentUrl.match(regexpPageNumber)
+              ? currentUrl.replace(regexpPageNumber, `/${lastPage}`)
+              : `${currentUrl}/${lastPage}`
+          }>
+          {lastPage}
+        </a>
+      )}
+      {nextUrl && (
+        <a
+          class="rounded-md bg-zinc-900 p-3 text-sm text-indigo-500 no-underline hover:shadow-md"
+          href={nextUrl}
+          aria-label="Next Page">
+          <Icon name="mdi:navigate-next" class="size-5" />
+        </a>
+      )}
+    </nav>
+  )
+}
