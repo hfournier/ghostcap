@@ -46,27 +46,29 @@ const { page } = Astro.props;
 ---
 
 <BaseLayout title={category.data.name} description={category.data.description}>
-  <div
-    class="flex flex-col items-center justify-center gap-4 rounded-lg bg-zinc-900 py-12">
-    <h1 class="text-4xl font-black uppercase">{category.data.name}</h1>
-    <div class="text-sm uppercase tracking-wider">
-      {category.data.description}
+  <main>
+    <div
+      class="flex flex-col items-center justify-center gap-4 rounded-lg bg-zinc-900 py-12">
+      <h1 class="text-4xl font-black uppercase">{category.data.name}</h1>
+      <div class="text-sm uppercase tracking-wider">
+        {category.data.description}
+      </div>
     </div>
-  </div>
-  <div class="grid grid-cols-2 gap-8 py-4">
-    {
-      page.data.map((post) => (
-        <a href={`/${post.slug}`}>
-          <CatCard {post} />
-        </a>
-      ))
-    }
-  </div>
-  <Pagination
-    prevUrl={page.url.prev}
-    nextUrl={page.url.next}
-    currentUrl={page.url.current}
-    currentPage={page.currentPage}
-    lastPage={page.lastPage}
-  />
+    <div class="grid grid-cols-2 gap-8 py-4">
+      {
+        page.data.map((post) => (
+          <a href={`/${post.slug}`}>
+            <CatCard {post} />
+          </a>
+        ))
+      }
+    </div>
+    <Pagination
+      prevUrl={page.url.prev}
+      nextUrl={page.url.next}
+      currentUrl={page.url.current}
+      currentPage={page.currentPage}
+      lastPage={page.lastPage}
+    />
+  </main>
 </BaseLayout>

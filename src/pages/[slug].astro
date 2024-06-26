@@ -1,6 +1,6 @@
 ---
 import type { GetStaticPaths } from "astro";
-import { getCollection } from "astro:content";
+import { getCollection, getEntries, type CollectionEntry } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
 import { getEntry } from "astro:content";
@@ -22,6 +22,24 @@ const { entry } = Astro.props;
 const { Content, headings } = await entry.render();
 
 const author = await getEntry(entry.data.author!);
+
+const categories = await getEntries(entry.data.categories!);
+const parentCategories = await getCollection(
+  "categories",
+  (cat) => cat.data.parentId === 0
+);
+let allCategories: CollectionEntry<"categories">[] = [];
+for (const category of categories) {
+  if (category.data.parentId !== 0) {
+    const parentCat = parentCategories.find(
+      (cat) => cat.data.wpId === category.data.parentId
+    );
+    if (parentCat) {
+      allCategories.push(parentCat);
+    }
+    allCategories.push(category);
+  }
+}
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description}>
@@ -32,7 +50,19 @@ const author = await getEntry(entry.data.author!);
         style={`background: radial-gradient(ellipse at 50% 0%, rgba(32, 8, 140, 0.75) 1%, #0F1011 76%), url(${entry.data.featuredMedia?.src.src}); background-size: cover; background-repeat: no-repeat; background-position: center;`}>
         <div class="flex flex-col gap-4">
           <div class="">
-            <a class="text-sm uppercase text-cyan-500" href="#">Hardware</a>
+            <ul class="flex gap-2">
+              {
+                allCategories.map((cat) => (
+                  <li class="flex items-center gap-2 [&:not(:last-child)]:after:content-['-']">
+                    <a
+                      class="text-sm uppercase text-cyan-500"
+                      href={`/category/${cat.data.slug}`}>
+                      {cat.data.name}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
           </div>
           <h1 class="text-4xl font-black uppercase text-white">
             {entry.data.title}
@@ -92,7 +122,7 @@ const author = await getEntry(entry.data.author!);
       </div>
       <div class="-mt-24 grid grid-cols-[minmax(0,_3fr)_minmax(0,_1fr)] gap-8">
         <div
-          class="prose prose-zinc lg:prose-md prose-invert prose-a:underline-offset-4 prose-a:text-inherit prose-code:after:content-[''] prose-code:before:content-[''] prose-a:font-normal prose-a:decoration-lime-500 prose-a:decoration-2 hover:prose-a:bg-lime-500 hover:prose-a:text-zinc-900 prose-code:text-pink-500 prose-ol:list-none prose-ol:relative prose-ol:pl-6 prose-ol:ml-6 w-full max-w-none py-8 [&_ol>li]:before:absolute [&_ol>li]:before:-left-3 [&_ol>li]:before:size-7 [&_ol>li]:before:rounded-full [&_ol>li]:before:bg-lime-500 [&_ol>li]:before:text-center [&_ol>li]:before:leading-7 [&_ol>li]:before:text-zinc-950 [&_ol>li]:before:content-[counter(list-item)] [&_ul>li]:marker:text-lime-500">
+          class="lg:prose-md prose prose-zinc prose-invert w-full max-w-none py-8 prose-a:font-normal prose-a:text-inherit prose-a:decoration-lime-500 prose-a:decoration-2 prose-a:underline-offset-4 hover:prose-a:bg-lime-500 hover:prose-a:text-zinc-900 prose-code:text-pink-500 prose-code:before:content-[''] prose-code:after:content-[''] prose-ol:relative prose-ol:ml-6 prose-ol:list-none prose-ol:pl-6 [&_ol>li]:before:absolute [&_ol>li]:before:-left-3 [&_ol>li]:before:size-7 [&_ol>li]:before:rounded-full [&_ol>li]:before:bg-lime-500 [&_ol>li]:before:text-center [&_ol>li]:before:leading-7 [&_ol>li]:before:text-zinc-950 [&_ol>li]:before:content-[counter(list-item)] [&_ul>li]:marker:text-lime-500">
           <Content />
         </div>
         <aside class="space-y-8">
