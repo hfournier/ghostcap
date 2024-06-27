@@ -1,14 +1,24 @@
 ---
-import BaseLayout from "@layouts/BaseLayout.astro";
+import PageLayout from "@layouts/PageLayout.astro";
 
-const wpId = 5545;
 const title = "About Us";
 const description = "TODO: Add description";
-const status = "publish";
-const type = "page";
-const createdAt = new Date("2021-12-31T01:46:21");
-const modifiedAt = new Date("2023-09-13T14:55:46");
-const author = "pedrotski";
 ---
 
-<BaseLayout {title} {description} />
+<PageLayout {title} {description} heading={title}>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium itaque,
+    quo in non doloremque eveniet veniam, quia architecto quibusdam corporis,
+    nihil quidem eum accusamus magni ea aut eligendi voluptatum nulla.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium itaque,
+    quo in non doloremque eveniet veniam, quia architecto quibusdam corporis,
+    nihil quidem eum accusamus magni ea aut eligendi voluptatum nulla.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium itaque,
+    quo in non doloremque eveniet veniam, quia architecto quibusdam corporis,
+    nihil quidem eum accusamus magni ea aut eligendi voluptatum nulla.
+  </p>
+</PageLayout>
