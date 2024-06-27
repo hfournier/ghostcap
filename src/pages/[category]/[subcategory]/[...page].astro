@@ -1,5 +1,6 @@
 ---
-import CatCard from "@components/CatCard.astro";
+import BlogCard from "@components/BlogCard.astro";
+import BlogCardList from "@components/BlogCardList.astro";
 import Pagination from "@components/Pagination.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import type { GetStaticPaths } from "astro";
@@ -52,15 +53,7 @@ const { page } = Astro.props;
         {subCategory.data.description}
       </div>
     </div>
-    <div class="grid grid-cols-2 gap-8 py-4">
-      {
-        page.data.map((post) => (
-          <a href={`/${post.slug}`}>
-            <CatCard {post} />
-          </a>
-        ))
-      }
-    </div>
+    <BlogCardList posts={page.data} />
     <Pagination
       prevUrl={page.url.prev}
       nextUrl={page.url.next}

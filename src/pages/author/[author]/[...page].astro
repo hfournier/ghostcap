@@ -5,8 +5,9 @@ import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import { getEntry } from "astro:content";
-import CatCard from "@components/CatCard.astro";
+import BlogCard from "@components/BlogCard.astro";
 import Pagination from "@components/Pagination.astro";
+import BlogCardList from "@components/BlogCardList.astro";
 
 export const getStaticPaths = (async ({ paginate }) => {
   const authors = await getCollection("authors");
@@ -31,7 +32,7 @@ const { page } = Astro.props;
 ---
 
 <BaseLayout title={author.data.name} description={author.data.description}>
-  <main class="">
+  <main>
     <div class="flex items-center gap-8 rounded-xl bg-zinc-900">
       {
         author.data.featuredMedia && (
@@ -46,7 +47,7 @@ const { page } = Astro.props;
         <h1 class="text-4xl font-black uppercase text-white">
           {author.data.name}
         </h1>
-        <div class="">{author.data.description}</div>
+        <div>{author.data.description}</div>
         <div class="flex gap-3">
           {
             author.data.social?.facebook && (
@@ -96,17 +97,7 @@ const { page } = Astro.props;
         class="my-6 border-l-[5px] border-indigo-700 py-0 pl-4 font-black uppercase text-white">
         All articles by {author.data.name}
       </h2>
-      <ul class="grid grid-cols-2 gap-8 py-4">
-        {
-          page.data.map((post) => (
-            <li>
-              <a href={`/${post.slug}`}>
-                <CatCard {post} />
-              </a>
-            </li>
-          ))
-        }
-      </ul>
+      <BlogCardList posts={page.data} />
       <Pagination
         prevUrl={page.url.prev}
         nextUrl={page.url.next}

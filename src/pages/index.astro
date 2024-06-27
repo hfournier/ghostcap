@@ -2,7 +2,7 @@
 import Latest from "@components/Latest.astro";
 import Hero from "@components/Hero.astro";
 import StartNow from "@components/StartNow.astro";
-import PopCat from "@components/PopCat.astro";
+import PopularCat from "@components/PopularCat.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import FeaturedCategory from "@components/FeaturedCategory.astro";
 
@@ -17,7 +17,7 @@ const description =
     <Latest />
     <StartNow />
     <FeaturedCategory category="gaming" title="Gaming" count={4} />
-    <PopCat
+    <PopularCat
       categories={[
         { name: "Counter Strike", link: "/gaming/counter-strike" },
         { name: "Minecraft", link: "/gaming/minecraft" },
@@ -31,7 +31,7 @@ const description =
       count={5}
       showFeatured={true}
     />
-    <PopCat
+    <PopularCat
       categories={[
         { name: "Hosting Guides", link: "/server-hosting/hosting-guides" },
         { name: "Hosting Reviews", link: "/server-hosting/hosting-reviews" },

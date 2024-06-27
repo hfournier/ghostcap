@@ -4,8 +4,10 @@ import { Image } from "astro:assets";
 import logo from "@assets/gcmmlogoghostcap.png";
 ---
 
-<footer class="flex flex-col items-center gap-3">
-  <div class="flex w-full gap-56 rounded-xl bg-indigo-600 p-12">
+<footer class="flex flex-col items-center gap-4 py-12">
+  <div
+    class="flex w-full gap-32 rounded-xl bg-indigo-600 p-8 sm:gap-36 md:gap-56"
+  >
     <nav class="flex flex-col gap-6">
       <h4 class="text-sm font-bold text-zinc-100">About GhostCap</h4>
       <ul class="flex flex-col gap-1">
@@ -23,7 +25,8 @@ import logo from "@assets/gcmmlogoghostcap.png";
         <li><a class="text-sm text-zinc-200" href="/contact">Contact</a></li>
         <li>
           <a class="text-sm text-zinc-200" href="https://status.ghostcap.com/"
-            >Status</a>
+            >Status</a
+          >
         </li>
       </ul>
     </nav>
@@ -33,47 +36,60 @@ import logo from "@assets/gcmmlogoghostcap.png";
         <li>
           <a
             class="text-sm text-zinc-200"
-            href="https://www.facebook.com/ghostcapgaming">Facebook</a>
+            href="https://www.facebook.com/ghostcapgaming">Facebook</a
+          >
         </li>
         <li>
           <a
             class="text-sm text-zinc-200"
-            href="https://steamcommunity.com/groups/GhostCapGaming">Steam</a>
+            href="https://steamcommunity.com/groups/GhostCapGaming">Steam</a
+          >
         </li>
         <li>
           <a class="text-sm text-zinc-200" href="https://twitter.com/ghostcap"
-            >Twitter</a>
+            >Twitter</a
+          >
         </li>
         <li>
           <a
             class="text-sm text-zinc-200"
             href="https://www.youtube.com/channel/UCTmqWNV0YGWxnAYrlvuU48Q"
-            >Youtube</a>
+            >Youtube</a
+          >
         </li>
         <li>
           <a
             class="text-sm text-zinc-200"
-            href="https://www.patreon.com/ghostcap">Patreon</a>
+            href="https://www.patreon.com/ghostcap">Patreon</a
+          >
         </li>
       </ul>
     </nav>
   </div>
-  <a class="block" href="/">
-    <Image class="py-5" src={logo} width={32} height={35} alt="GhostCap logo" />
-  </a>
-  <div class="py-3 text-sm text-zinc-300">&copy; 2024 GhostCap&reg;</div>
-  <p class="text-sm text-zinc-300">
-    All product and company names are trademarks&trade; or registered&reg;
-    trademarks of their respective holders. Use of them does not imply any
-    affiliation with or endorsement by them.
-  </p>
-  <p class="text-center text-sm text-zinc-300">
-    We may earn commission from companies if you purchase via our affiliate
-    link. This helps us run GhostCap as a free resource for you. Please note
-    that we are not asked to promote these products and do so on our own accord.
-    As an Amazon Associate we may earn from qualifying purchases
-  </p>
-  <p class="text-sm text-zinc-300">
-    All specifications are subject to change without notice.
-  </p>
+  <div class="flex flex-col items-center gap-4 px-8">
+    <a class="block" href="/">
+      <Image
+        class="py-5"
+        src={logo}
+        width={32}
+        height={35}
+        alt="GhostCap logo"
+      />
+    </a>
+    <div class="py-3 text-sm text-zinc-300">&copy; 2024 GhostCap&reg;</div>
+    <p class="text-center text-sm text-zinc-300">
+      All product and company names are trademarks&trade; or registered&reg;
+      trademarks of their respective holders. Use of them does not imply any
+      affiliation with or endorsement by them.
+    </p>
+    <p class="text-center text-sm text-zinc-300">
+      We may earn commission from companies if you purchase via our affiliate
+      link. This helps us run GhostCap as a free resource for you. Please note
+      that we are not asked to promote these products and do so on our own
+      accord. As an Amazon Associate we may earn from qualifying purchases
+    </p>
+    <p class="text-center text-sm text-zinc-300">
+      All specifications are subject to change without notice.
+    </p>
+  </div>
 </footer>

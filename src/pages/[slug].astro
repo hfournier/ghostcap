@@ -43,7 +43,7 @@ for (const category of categories) {
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description}>
-  <main class="">
+  <main>
     <div
       class="absolute inset-0 top-[70px] -z-50"
       style={`background: radial-gradient(ellipse at 50% 0%, rgba(32, 8, 140, 0.75) 1%, #09090b 76%), url(${entry.data.featuredMedia?.src.src}); background-size: cover; background-repeat: no-repeat; background-position: center;`}>
@@ -51,7 +51,7 @@ for (const category of categories) {
     <article>
       <div class="grid grid-cols-[auto_auto] place-items-center pb-52 pt-40">
         <div class="flex flex-col gap-4">
-          <div class="">
+          <div>
             <ul class="flex gap-2">
               {
                 allCategories.map((cat) => (

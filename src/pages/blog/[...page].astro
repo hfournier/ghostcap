@@ -3,7 +3,8 @@ import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Pagination from "@components/Pagination.astro";
-import CatCard from "@components/CatCard.astro";
+import BlogCard from "@components/BlogCard.astro";
+import BlogCardList from "@components/BlogCardList.astro";
 
 const title = "Blog";
 const description = "A list of all blog posts";
@@ -24,24 +25,14 @@ const { page } = Astro.props;
 ---
 
 <BaseLayout {title} {description}>
-  <main class="">
+  <main>
     <div
       class="absolute inset-0 -top-40 -z-50 bg-[image:radial-gradient(ellipse_at_50%_0%,_rgba(32_8_140_/_0.75)_1%,_#09090b_76%),_url('/gcmmhero-scaled.jpg')] bg-cover bg-center bg-no-repeat">
     </div>
     <div class="px-6 py-40">
       <h1 class="text-5xl font-black uppercase text-white">{title}</h1>
     </div>
-    <ul class="grid grid-cols-2 gap-8 py-4">
-      {
-        page.data.map((post) => (
-          <li>
-            <a href={`/${post.slug}`}>
-              <CatCard {post} />
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+    <BlogCardList posts={page.data} />
     <Pagination
       prevUrl={page.url.prev}
       nextUrl={page.url.next}
@@ -50,40 +41,18 @@ const { page } = Astro.props;
       lastPage={page.lastPage}
     />
 
-    <!-- <div class="grid grid-cols-[minmax(0,_2fr)_minmax(0,_1fr)] gap-4">
-      <div class="space-y-6">
-        <ul class="flex flex-col gap-8">
-          {
-            page.data.map((post) => (
-              <li class="rounded-md bg-zinc-900">
-                <a class="" href={`/${post.slug}`}>
-                  <BlogCard {post} />
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-        <Pagination
-          prevUrl={page.url.prev}
-          nextUrl={page.url.next}
-          currentUrl={page.url.current}
-          currentPage={page.currentPage}
-          lastPage={page.lastPage}
-        />
-      </div>
-      <div>
-        <div
-          class="rounded-md bg-indigo-500 bg-[image:linear-gradient(rgba(88_101_242_/_0.7),_rgba(88_101_242_/_0.7)),_url('/Discord-Logo-White.svg')] bg-[auto,_30%_auto] bg-[10%_50%] bg-no-repeat">
-          <div class="flex flex-col items-center gap-2 p-4">
-            <div class="text-sm uppercase text-zinc-100">
-              Come join our Discord community!
-            </div>
-            <div>
-              <a
-                class="bg-red-600 px-3 py-1 text-sm uppercase text-white"
-                href="http://discord.ghostcap.com/">Click to join</a
-              >
-            </div>
+    <!-- <div>
+      <div
+        class="rounded-md bg-indigo-500 bg-[image:linear-gradient(rgba(88_101_242_/_0.7),_rgba(88_101_242_/_0.7)),_url('/Discord-Logo-White.svg')] bg-[auto,_30%_auto] bg-[10%_50%] bg-no-repeat">
+        <div class="flex flex-col items-center gap-2 p-4">
+          <div class="text-sm uppercase text-zinc-100">
+            Come join our Discord community!
+          </div>
+          <div>
+            <a
+              class="bg-red-600 px-3 py-1 text-sm uppercase text-white"
+              href="http://discord.ghostcap.com/">Click to join</a
+            >
           </div>
         </div>
       </div>

@@ -42,7 +42,8 @@ const paginationList: number[] =
         <a
           class="rounded-md bg-zinc-900 p-3 text-sm text-indigo-500 no-underline hover:shadow-md"
           href={prevUrl}
-          aria-label="Previous Page">
+          aria-label="Previous Page"
+        >
           <Icon name="mdi:navigate-before" class="size-5" />
         </a>
       )}
@@ -54,7 +55,8 @@ const paginationList: number[] =
         <a
           class="min-w-[1.5rem] rounded-md bg-zinc-900 px-4 py-3 text-center text-sm text-indigo-500 no-underline hover:shadow-md data-[page='0']:hidden"
           data-page={firstPage}
-          href={currentUrl.replace(regexpPageNumber, "")}>
+          href={currentUrl.replace(regexpPageNumber, "")}
+        >
           {firstPage}
         </a>
       )}
@@ -77,10 +79,11 @@ const paginationList: number[] =
                 : currentUrl.match(regexpPageNumber)
                   ? currentUrl.replace(regexpPageNumber, `/${i}`)
                   : `${currentUrl}/${i}`
-            }>
+            }
+          >
             {i}
           </a>
-        )
+        ),
       )}
 
       {paginationList.length > 0 &&
@@ -99,7 +102,8 @@ const paginationList: number[] =
             currentUrl.match(regexpPageNumber)
               ? currentUrl.replace(regexpPageNumber, `/${lastPage}`)
               : `${currentUrl}/${lastPage}`
-          }>
+          }
+        >
           {lastPage}
         </a>
       )}
@@ -107,7 +111,8 @@ const paginationList: number[] =
         <a
           class="rounded-md bg-zinc-900 p-3 text-sm text-indigo-500 no-underline hover:shadow-md"
           href={nextUrl}
-          aria-label="Next Page">
+          aria-label="Next Page"
+        >
           <Icon name="mdi:navigate-next" class="size-5" />
         </a>
       )}

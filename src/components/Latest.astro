@@ -5,7 +5,7 @@ import Card from "./Card.astro";
 
 const latestPosts = await getCollection(
   "posts",
-  (post) => post.data.draft !== true
+  (post) => post.data.draft !== true,
 );
 const sortedPosts = latestPosts
   .sort((a, b) => b.data.createdAt.valueOf() - a.data.createdAt.valueOf())

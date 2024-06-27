@@ -6,8 +6,10 @@ import logo from "@assets/gcmmlogoghostcap.png";
 import Search from "./Search.astro";
 ---
 
-<header class="flex items-center justify-between bg-zinc-950 p-4">
-  <div class="flex items-center gap-6">
+<header
+  class="flex flex-col items-center justify-center gap-6 bg-zinc-950 py-4 md:flex-row md:flex-wrap lg:justify-between"
+>
+  <div class="flex items-center gap-10 md:gap-7">
     <a href="/">
       <Image src={logo} width={32} height={35} alt="GhostCap logo" />
     </a>

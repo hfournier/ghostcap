@@ -10,11 +10,14 @@ const { title, link } = Astro.props;
 <section class="py-12">
   <a href={link}>
     <h2
-      class="my-6 border-l-[5px] border-indigo-700 py-0 pl-4 font-black uppercase text-white">
+      class="my-6 border-l-[5px] border-indigo-700 py-0 pl-4 font-black uppercase text-white"
+    >
       {title}
     </h2>
   </a>
-  <div class="grid grid-cols-4 gap-x-12 gap-y-20">
+  <div
+    class="grid grid-cols-1 gap-y-20 sm:grid-cols-2 sm:gap-x-4 lg:grid-cols-4 lg:gap-x-12"
+  >
     <slot />
   </div>
 </section>
