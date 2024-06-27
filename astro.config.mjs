@@ -3,6 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
 
 import mdx from "@astrojs/mdx";
+import { remarkReadingTime } from "./remark-reading-time.mjs";
 
 // https://astro.build/config
 export default defineConfig({
@@ -32,4 +33,7 @@ export default defineConfig({
     }),
     mdx(),
   ],
+  markdown: {
+    remarkPlugins: [remarkReadingTime],
+  },
 });

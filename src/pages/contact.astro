@@ -1,14 +1,8 @@
 ---
 import PageLayout from "@layouts/PageLayout.astro";
 
-const wpId = 5646;
 const title = "Contact";
 const description = "Thanks for wanting to get in touch. If you have ...";
-const status = "publish";
-const type = "page";
-const createdAt = new Date("2022-02-02T16:36:46");
-const modifiedAt = new Date("2023-05-07T17:00:36");
-const author = "pedrotski";
 ---
 
 <PageLayout {title} {description} heading="Contact">
@@ -49,10 +43,33 @@ const author = "pedrotski";
     >.
   </p>
 
-  <!-- <iframe data-tally-src="https://tally.so/embed/nrByQo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="292" frameborder="0" marginheight="0" marginwidth="0" title="
-"></iframe><pre>
-<code>
-<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-</code>
-</pre> -->
+  <iframe
+    data-tally-src="https://tally.so/embed/nrByQo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+    loading="lazy"
+    width="100%"
+    height="292"
+    frameborder="0"
+    marginheight="0"
+    marginwidth="0"
+    title="
+"></iframe>
 </PageLayout>
+
+<script>
+  var d = document,
+    w = "https://tally.so/widgets/embed.js",
+    v = function () {
+      "undefined" != typeof Tally
+        ? Tally.loadEmbeds()
+        : d
+            .querySelectorAll("iframe[data-tally-src]:not([src])")
+            .forEach(function (e) {
+              e.src = e.dataset.tallySrc;
+            });
+    };
+  if ("undefined" != typeof Tally) v();
+  else if (d.querySelector('script[src="' + w + '"]') == null) {
+    var s = d.createElement("script");
+    (s.src = w), (s.onload = v), (s.onerror = v), d.body.appendChild(s);
+  }
+</script>
