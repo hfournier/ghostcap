@@ -81,7 +81,7 @@ const categories = parentCategories.map((category) => {
       ))
     }
   </ul>
-  <ul class="hidden items-center gap-5 md:flex">
+  <ul id="desktopMenu" class="hidden items-center gap-5 md:flex">
     <li>
       <a
         class="block py-1 text-sm uppercase text-zinc-200"
@@ -91,7 +91,7 @@ const categories = parentCategories.map((category) => {
     {
       categories.map((category) => (
         <>
-          <li class="group relative flex items-center gap-0.5 [&:nth-child(2)>ul:popover-open]:left-[9.75rem] [&:nth-child(4)>ul:popover-open]:left-[22.25rem]">
+          <li class="group relative flex items-center gap-0.5">
             <a
               class="text-sm uppercase text-zinc-200"
               href={`/${category.category.id}`}>
@@ -141,6 +141,11 @@ const categories = parentCategories.map((category) => {
       & :nth-child(4) > ul {
         top: 16rem;
       }
+    }
+    #desktopMenu [popover]:popover-open {
+      opacity: 0;
+      top: 1.5rem;
+      left: 0;
     }
   }
 </style>
