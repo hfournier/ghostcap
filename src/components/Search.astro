@@ -3,10 +3,15 @@ import { Icon } from "astro-icon/components";
 ---
 
 <div class="flex items-center gap-3">
+  <label for="search" class="sr-only">Search</label>
   <input
-    class="rounded-lg border border-zinc-500 bg-zinc-800 p-2 text-sm text-white"
+    id="search"
+    class="rounded-lg border border-zinc-300 bg-zinc-800 p-2 text-sm text-white"
     type="text"
     placeholder="Search here..."
   />
-  <Icon class="size-8 text-white" name="mdi:search" />
+  <button type="button">
+    <span class="sr-only">Search</span>
+    <Icon class="size-8 text-white" name="mdi:search" aria-hidden="true" />
+  </button>
 </div>

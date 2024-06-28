@@ -19,8 +19,7 @@ const { post, featured = false, eager = false } = Astro.props;
     { "sm:col-span-2": featured },
     { "lg:col-span-4": featured },
     { "gap-16": featured },
-  ]}
->
+  ]}>
   {
     post.data.featuredMedia && post.data.featuredMedia.alt && (
       <Image
@@ -42,7 +41,7 @@ const { post, featured = false, eager = false } = Astro.props;
   }
   <div class="flex flex-col gap-1">
     <time
-      class="text-sm text-zinc-500"
+      class="text-sm text-zinc-400"
       datetime={new Date(post.data.createdAt).toISOString()}
       >{
         new Date(post.data.createdAt).toLocaleDateString(undefined, {

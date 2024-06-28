@@ -102,9 +102,11 @@ const categories = parentCategories.map((category) => {
                 <button
                   type="button"
                   popovertarget={`popover-${category.category.id}`}>
+                  <span class="sr-only">Expand</span>
                   <Icon
                     class="size-6 transition-transform duration-300 group-hover:rotate-90"
                     name="mdi:chevron-down"
+                    aria-hidden="true"
                   />
                 </button>
                 <ul
