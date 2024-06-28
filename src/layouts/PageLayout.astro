@@ -1,5 +1,9 @@
 ---
+import { getImage } from "astro:assets";
 import BaseLayout from "./BaseLayout.astro";
+import gcmback_jpg from "@assets/gcmback.jpg";
+
+const gcmback = await getImage({ src: gcmback_jpg, quality: 80 });
 
 type Props = {
   title: string;
@@ -12,7 +16,8 @@ const { title, description, heading } = Astro.props;
 <BaseLayout {title} {description}>
   <main class="space-y-4 pb-24 pt-2">
     <div
-      class="mb-16 rounded-xl bg-[image:linear-gradient(rgba(78_70_230_/_0.5),_rgba(78_70_230_/_0.5)),_url('/gcmback.jpg')] bg-cover bg-repeat px-8 py-12">
+      class={`mb-16 rounded-xl px-8 py-12`}
+      style={`background-image: linear-gradient(rgba(78,70,230,0.5), rgba(78,70,230,0.5)), url(${gcmback.src}); background-size: auto, cover;`}>
       <h1 class="font-black uppercase leading-tight text-white/80">
         {heading}
       </h1>

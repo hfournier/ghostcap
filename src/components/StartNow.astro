@@ -1,8 +1,14 @@
 ---
-import { Image } from "astro:assets";
+import { getImage, Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 
 import league from "@assets/league.png";
+import Valorant_Xbox_Series_X_1280x720_1 from "@assets/Valorant-Xbox-Series-X-1280x720-1.webp";
+
+const gcmback = await getImage({
+  src: Valorant_Xbox_Series_X_1280x720_1,
+  quality: 80,
+});
 
 type Props = {
   showLeague?: boolean;
@@ -12,14 +18,15 @@ const { showLeague = true } = Astro.props;
 ---
 
 <section
-  class="relative space-y-4 rounded-xl bg-[image:linear-gradient(rgba(8_10_13_/_0.7),_rgba(8_10_13_/_0.7)),_url('/Valorant-Xbox-Series-X-1280x720-1.webp')] p-8">
+  class="relative space-y-4 rounded-xl bg-zinc-800 p-4 sm:p-6 lg:p-8"
+  style={`background-image: linear-gradient(rgba(8,10,13,0.7), rgba(8,10,13,0.7)), url(${Valorant_Xbox_Series_X_1280x720_1.src});`}>
   <h2 class="font-semibold uppercase leading-tight text-white">
     EVER WANTED TO START YOUR OWN GAME SERVER?
   </h2>
   <div
     class:list={[
       "leading-tight tracking-wider text-zinc-300",
-      { "max-w-[70%]": showLeague },
+      { "xl:max-w-[70%]": showLeague },
     ]}>
     When we started playing online games with our friends, we knew we needed a
     good game server. But finding one that delivered what gaming communities
@@ -27,7 +34,7 @@ const { showLeague = true } = Astro.props;
     server network.
   </div>
   <div
-    class="flex max-w-fit items-center gap-3 rounded-md bg-zinc-100 px-6 py-3 text-black">
+    class="flex items-center justify-center gap-3 rounded-md bg-zinc-100 px-6 py-3 text-black sm:max-w-fit">
     <a class="text-sm uppercase" href="https://www.gamehostbros.com/"
       >Start your server now</a
     >
@@ -36,7 +43,7 @@ const { showLeague = true } = Astro.props;
   {
     showLeague && (
       <Image
-        class="absolute right-0 top-0 hidden lg:block"
+        class="absolute right-0 top-0 hidden xl:block"
         src={league}
         alt="League"
         width={400}

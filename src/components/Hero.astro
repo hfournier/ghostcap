@@ -1,9 +1,14 @@
 ---
+import { getImage } from "astro:assets";
 import { Icon } from "astro-icon/components";
+import gcmback_jpg from "@assets/gcmback.jpg";
+
+const gcmback = await getImage({ src: gcmback_jpg, quality: 80 });
 ---
 
 <section
-  class="space-y-4 rounded-xl bg-[image:linear-gradient(rgba(78_70_230_/_0.5),_rgba(78_70_230_/_0.5)),_url('/gcmback.jpg')] px-3 py-12 sm:px-6 md:py-20">
+  class="space-y-4 rounded-xl px-3 py-12 sm:px-6 md:py-20 lg:py-28"
+  style={`background-image: linear-gradient(rgba(78,70,230,0.5), rgba(78,70,230,0.5)), url(${gcmback.src});`}>
   <h1 class="font-black uppercase leading-tight text-white/80">
     Your Gateway to Unforgettable Gaming Adventures
   </h1>

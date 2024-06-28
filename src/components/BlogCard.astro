@@ -10,14 +10,17 @@ const { post } = Astro.props;
 ---
 
 <div
-  class="grid-rows-[minmax(auto,_max-content] grid bg-zinc-900 transition-all duration-500 hover:-translate-y-2 hover:opacity-80 sm:grid-cols-[minmax(0,_2fr)_minmax(0,_3fr)]"
->
+  class="grid-rows-[minmax(auto,_max-content] grid bg-zinc-900 transition-all duration-500 hover:-translate-y-2 hover:opacity-80 sm:grid-cols-[minmax(0,_2fr)_minmax(0,_3fr)] md:grid-cols-1 lg:grid-cols-[minmax(0,_2fr)_minmax(0,_3fr)]">
   {
     post.data.featuredMedia && (
       <Image
         class="h-full min-h-[200px] grow rounded-xl object-cover"
         src={post.data.featuredMedia.src}
         alt={post.data.featuredMedia.alt || ""}
+        sizes={
+          "(max-width: 639px) 100vw, (max-width: 767px) 40vw, (max-width: 1023px) 50vw, (max-width: 1595px) 20vw, 294px"
+        }
+        widths={[294, 384, 425, 512, 640]}
         loading="eager"
       />
     )

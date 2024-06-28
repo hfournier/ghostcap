@@ -21,15 +21,29 @@ const { post, featured = false, eager = false } = Astro.props;
     { "gap-16": featured },
   ]}>
   {
-    post.data.featuredMedia && post.data.featuredMedia.alt && (
+    post.data.featuredMedia && post.data.featuredMedia.alt && featured && (
+      // 340, 732
       <Image
-        class:list={[
-          "rounded-xl",
-          { "sm:w-[calc(50%-8px)]": featured },
-          { "lg:w-[calc(50%-20px)]": featured },
-        ]}
+        class="rounded-xl sm:w-[calc(50%-8px)] lg:w-[calc(50%-20px)]"
         src={post.data.featuredMedia.src}
         alt={post.data.featuredMedia.alt || ""}
+        sizes={"(max-width: 639px) 100vw, (max-width: 1535px) 50vw, 732px"}
+        widths={[340, 640, 732, 768]}
+        loading={eager ? "eager" : "lazy"}
+      />
+    )
+  }
+  {
+    post.data.featuredMedia && post.data.featuredMedia.alt && !featured && (
+      // 340, 732
+      <Image
+        class="rounded-xl"
+        src={post.data.featuredMedia.src}
+        alt={post.data.featuredMedia.alt || ""}
+        sizes={
+          "(max-width: 639px) 100vw, (max-width: 1023px) 50vw, (max-width: 1535px) 25vw, 340px"
+        }
+        widths={[340, 384, 512, 640]}
         loading={eager ? "eager" : "lazy"}
       />
     )
