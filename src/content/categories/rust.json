@@ -1,1 +1,8 @@
-{"wpId":326,"count":12,"name":"Rust","description":"Survive and thrive in a harsh world with our tactical guides, server picks, and community advice.","parentId":351,"slug":"rust"}
+{
+  "wpId": 326,
+  "count": 12,
+  "name": "Rust",
+  "description": "Survive and thrive in a harsh world with our tactical guides, server picks, and community advice.",
+  "parent": "gaming",
+  "slug": "rust"
+}

@@ -1,1 +1,7 @@
-{"wpId":221,"count":2,"name":"Software","description":"Stay updated on essential gaming software, tools, and mods to elevate your gaming experience and performance.","parentId":0,"slug":"software"}
+{
+  "wpId": 221,
+  "count": 2,
+  "name": "Software",
+  "description": "Stay updated on essential gaming software, tools, and mods to elevate your gaming experience and performance.",
+  "slug": "software"
+}

@@ -64,7 +64,7 @@ const Category = z.object({
   count: z.number(),
   name: z.string(),
   description: z.string(),
-  parentId: z.number(),
+  parent: reference("categories").optional(),
   slug: z.string().optional(),
 });
 

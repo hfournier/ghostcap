@@ -1,1 +1,8 @@
-{"wpId":364,"count":4,"name":"Soulmask","description":"","parentId":351,"slug":"soulmask"}
+{
+  "wpId": 364,
+  "count": 4,
+  "name": "Soulmask",
+  "description": "",
+  "parent": "gaming",
+  "slug": "soulmask"
+}

@@ -1,16 +1,16 @@
 ---
 import { Icon } from "astro-icon/components";
 
-export interface Props {
+type Props = {
   prevUrl?: string;
   currentUrl: string;
   nextUrl?: string;
   currentPage: number;
   lastPage: number;
-}
+};
 
-const { prevUrl, currentUrl, nextUrl, currentPage, lastPage } =
-  Astro.props as Props;
+const { prevUrl, currentUrl, nextUrl, currentPage, lastPage } = Astro.props;
+
 const firstPage = 1;
 const regexpPageNumber = /\/[0-9]+(?=[^/]*$)/g;
 let paginationLeft: number[] =
@@ -36,27 +36,25 @@ const paginationList: number[] =
 ---
 
 {
-  paginationList.length > 1 && (
-    <nav class="mx-auto flex items-center justify-center gap-3 p-0 py-6">
+  lastPage !== 1 && (
+    <nav class="mx-auto flex items-center justify-center gap-3 px-0 py-6">
       {prevUrl && (
         <a
-          class="rounded-md bg-zinc-900 p-3 text-sm text-indigo-500 no-underline hover:shadow-md"
+          class="rounded-md bg-zinc-900 px-1 py-3 text-sm text-indigo-500 no-underline hover:shadow-md"
           href={prevUrl}
-          aria-label="Previous Page"
-        >
+          aria-label="Previous Page">
           <Icon name="mdi:navigate-before" class="size-5" />
         </a>
       )}
       {currentPage === firstPage ? (
-        <span class="min-w-[1.5rem] rounded border border-zinc-800 px-4 py-3 text-center text-sm text-indigo-500">
+        <span class="min-w-[1.5rem] rounded border border-zinc-800 p-3 text-center text-sm text-indigo-500">
           {firstPage}
         </span>
       ) : (
         <a
-          class="min-w-[1.5rem] rounded-md bg-zinc-900 px-4 py-3 text-center text-sm text-indigo-500 no-underline hover:shadow-md data-[page='0']:hidden"
+          class="min-w-[1.5rem] rounded-md bg-zinc-900 p-3 text-center text-sm text-indigo-500 no-underline hover:shadow-md data-[page='0']:hidden"
           data-page={firstPage}
-          href={currentUrl.replace(regexpPageNumber, "")}
-        >
+          href={currentUrl.replace(regexpPageNumber, "")}>
           {firstPage}
         </a>
       )}
@@ -66,12 +64,12 @@ const paginationList: number[] =
 
       {paginationList.map((i) =>
         i === currentPage ? (
-          <span class="min-w-[1.5rem] rounded border border-zinc-800 px-4 py-3 text-center text-sm text-indigo-500">
+          <span class="min-w-[1.5rem] rounded border border-zinc-800 p-3 text-center text-sm text-indigo-500">
             {i}
           </span>
         ) : (
           <a
-            class="min-w-[1.5rem] rounded-md bg-zinc-900 px-4 py-3 text-center text-sm text-indigo-500 no-underline hover:shadow-md data-[page='0']:hidden"
+            class="min-w-[1.5rem] rounded-md bg-zinc-900 p-3 text-center text-sm text-indigo-500 no-underline hover:shadow-md data-[page='0']:hidden"
             data-page={i}
             href={
               i === 1
@@ -79,11 +77,10 @@ const paginationList: number[] =
                 : currentUrl.match(regexpPageNumber)
                   ? currentUrl.replace(regexpPageNumber, `/${i}`)
                   : `${currentUrl}/${i}`
-            }
-          >
+            }>
             {i}
           </a>
-        ),
+        )
       )}
 
       {paginationList.length > 0 &&
@@ -91,28 +88,26 @@ const paginationList: number[] =
           <span class="py-3 text-center text-sm text-zinc-500">...</span>
         )}
       {currentPage === lastPage ? (
-        <span class="min-w-[1.5rem] rounded border border-zinc-800 px-4 py-3 text-center text-sm text-indigo-500">
+        <span class="min-w-[1.5rem] rounded border border-zinc-800 p-3 text-center text-sm text-indigo-500">
           {lastPage}
         </span>
       ) : (
         <a
-          class="min-w-[1.5rem] rounded-md bg-zinc-900 px-4 py-3 text-center text-sm text-indigo-500 no-underline hover:shadow-md data-[page='0']:hidden"
+          class="min-w-[1.5rem] rounded-md bg-zinc-900 p-3 text-center text-sm text-indigo-500 no-underline hover:shadow-md data-[page='0']:hidden"
           data-page={lastPage}
           href={
             currentUrl.match(regexpPageNumber)
               ? currentUrl.replace(regexpPageNumber, `/${lastPage}`)
               : `${currentUrl}/${lastPage}`
-          }
-        >
+          }>
           {lastPage}
         </a>
       )}
       {nextUrl && (
         <a
-          class="rounded-md bg-zinc-900 p-3 text-sm text-indigo-500 no-underline hover:shadow-md"
+          class="rounded-md bg-zinc-900 px-1 py-3 text-sm text-indigo-500 no-underline hover:shadow-md"
           href={nextUrl}
-          aria-label="Next Page"
-        >
+          aria-label="Next Page">
           <Icon name="mdi:navigate-next" class="size-5" />
         </a>
       )}

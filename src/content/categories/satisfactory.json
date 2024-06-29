@@ -1,1 +1,8 @@
-{"wpId":332,"count":5,"name":"Satisfactory","description":"Optimize your factory-building experience with our efficient strategies, guides, and tips.","parentId":351,"slug":"satisfactory"}
+{
+  "wpId": 332,
+  "count": 5,
+  "name": "Satisfactory",
+  "description": "Optimize your factory-building experience with our efficient strategies, guides, and tips.",
+  "parent": "gaming",
+  "slug": "satisfactory"
+}

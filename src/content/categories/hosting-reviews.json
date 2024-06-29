@@ -1,1 +1,8 @@
-{"wpId":331,"count":13,"name":"Hosting Reviews","description":"Compare top server providers through our in-depth assessments and user experiences to find your ideal match.","parentId":352,"slug":"hosting-reviews"}
+{
+  "wpId": 331,
+  "count": 13,
+  "name": "Hosting Reviews",
+  "description": "Compare top server providers through our in-depth assessments and user experiences to find your ideal match.",
+  "parent": "server-hosting",
+  "slug": "hosting-reviews"
+}

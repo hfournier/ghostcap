@@ -24,16 +24,10 @@ const { Content, headings, remarkPluginFrontmatter } = await entry.render();
 const author = await getEntry(entry.data.author!);
 
 const categories = await getEntries(entry.data.categories!);
-const parentCategories = await getCollection(
-  "categories",
-  (cat) => cat.data.parentId === 0
-);
 let allCategories: CollectionEntry<"categories">[] = [];
 for (const category of categories) {
-  if (category.data.parentId !== 0) {
-    const parentCat = parentCategories.find(
-      (cat) => cat.data.wpId === category.data.parentId
-    );
+  if (category.data.parent) {
+    const parentCat = await getEntry(category.data.parent);
     if (parentCat) {
       allCategories.push(parentCat);
     }

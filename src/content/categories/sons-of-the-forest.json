@@ -1,1 +1,8 @@
-{"wpId":357,"count":1,"name":"Sons of the Forest","description":"Craft, build, and struggle to survive, alone or with friends, in this terrifying new open-world survival horror simulator.","parentId":351,"slug":"sons-of-the-forest"}
+{
+  "wpId": 357,
+  "count": 1,
+  "name": "Sons of the Forest",
+  "description": "Craft, build, and struggle to survive, alone or with friends, in this terrifying new open-world survival horror simulator.",
+  "parent": "gaming",
+  "slug": "sons-of-the-forest"
+}

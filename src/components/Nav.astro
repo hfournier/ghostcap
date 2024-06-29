@@ -2,22 +2,20 @@
 import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
 
-const menuParentCategories = ["gaming", "hardware", "server-hosting", "tools"];
-
 const parentCategories = await getCollection(
   "categories",
-  (cat) => cat.data.parentId === 0 && menuParentCategories.includes(cat.id)
+  (cat) => cat.data.parent === undefined
 );
 const subCategories = await getCollection(
   "categories",
-  (cat) => cat.data.parentId !== 0
+  (cat) => cat.data.parent
 );
 
 const categories = parentCategories.map((category) => {
   return {
     category,
     subCategories: subCategories.filter(
-      (cat) => cat.data.parentId === category.data.wpId
+      (cat) => cat.data.parent?.id === category.id
     ),
   };
 });

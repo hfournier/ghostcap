@@ -1,1 +1,8 @@
-{"wpId":365,"count":2,"name":"Enshrouded","description":"Enshrouded is a fog-laden open world where you build intricate bases, and battle fierce foes in this immersive survival game. Explore, craft, and thrive in a dynamic adventure.","parentId":351,"slug":"enshrouded"}
+{
+  "wpId": 365,
+  "count": 2,
+  "name": "Enshrouded",
+  "description": "Enshrouded is a fog-laden open world where you build intricate bases, and battle fierce foes in this immersive survival game. Explore, craft, and thrive in a dynamic adventure.",
+  "parent": "gaming",
+  "slug": "enshrouded"
+}

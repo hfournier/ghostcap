@@ -1,5 +1,4 @@
 ---
-import BlogCard from "@components/BlogCard.astro";
 import BlogCardList from "@components/BlogCardList.astro";
 import Pagination from "@components/Pagination.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
@@ -7,13 +6,13 @@ import type { GetStaticPaths } from "astro";
 import { getCollection, getEntry } from "astro:content";
 
 export const getStaticPaths = (async ({ paginate }) => {
-  const subCategories = await getCollection(
-    "categories",
-    (cat) => cat.data.parentId !== 0
-  );
   const parentCategories = await getCollection(
     "categories",
-    (cat) => cat.data.parentId === 0
+    (cat) => cat.data.parent === undefined
+  );
+  const subCategories = await getCollection(
+    "categories",
+    (cat) => cat.data.parent
   );
   const entries = await getCollection(
     "posts",
@@ -29,7 +28,7 @@ export const getStaticPaths = (async ({ paginate }) => {
       params: {
         subcategory: subCategory.id,
         category: parentCategories.find(
-          (cat) => cat.data.wpId === subCategory.data.parentId
+          (cat) => cat.id === subCategory.data.parent?.id
         )?.id,
       },
       pageSize: 10,
